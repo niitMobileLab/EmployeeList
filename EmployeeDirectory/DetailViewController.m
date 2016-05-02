@@ -61,30 +61,35 @@
         self.nameLabel.text = [NSString stringWithFormat:@"%@ %@", self.employee.firstName, self.employee.lastName];
         self.titleLabel.text = self.employee.title;
         [self.employeePic setImage:[UIImage imageNamed:self.employee.picture]];
-        self.actions = [[NSMutableArray alloc] init];
-        
-        NSDictionary *callOffice = [NSDictionary dictionaryWithObjectsAndKeys:@"Call Office", @"label", self.employee.officePhone, @"data", @"call", @"command", nil];
-        [self.actions addObject:callOffice];
-        
-        NSDictionary *callCell = [NSDictionary dictionaryWithObjectsAndKeys:@"Call Cell", @"label", self.employee.cellPhone, @"data", @"call", @"command", nil];
-        [self.actions addObject:callCell];
-        
-        NSDictionary *sms = [NSDictionary dictionaryWithObjectsAndKeys:@"SMS", @"label", self.employee.cellPhone, @"data", @"sms", @"command", nil];
-        [self.actions addObject:sms];
-        
-        NSDictionary *email = [NSDictionary dictionaryWithObjectsAndKeys:@"Email", @"label", self.employee.email, @"data", @"email", @"command", nil];
-        [self.actions addObject:email];
-        
-        
-        if ([self.employee.managerId intValue] > 0) {
-            NSDictionary *mgr = [NSDictionary dictionaryWithObjectsAndKeys:@"View Manager", @"label", [NSString stringWithFormat:@"%@ %@", self.manager.firstName, self.manager.lastName], @"data", @"mgr", @"command", nil];
-            [self.actions addObject:mgr];
-        }
-        
-        if ([self.reports count] > 0) {
-            NSDictionary *reportsAction = [NSDictionary dictionaryWithObjectsAndKeys:@"View Reports", @"label", [NSString stringWithFormat:@"%lu", (unsigned long)[self.reports count]], @"data", @"reports", @"command", nil];
-            [self.actions addObject:reportsAction];
-        }
+        [self setUpActionsData];
+    }
+}
+
+-(void)setUpActionsData
+{
+    self.actions = [[NSMutableArray alloc] init];
+    
+    NSDictionary *callOffice = [NSDictionary dictionaryWithObjectsAndKeys:@"Call Office", @"label", self.employee.officePhone, @"data", @"call", @"command", nil];
+    [self.actions addObject:callOffice];
+    
+    NSDictionary *callCell = [NSDictionary dictionaryWithObjectsAndKeys:@"Call Cell", @"label", self.employee.cellPhone, @"data", @"call", @"command", nil];
+    [self.actions addObject:callCell];
+    
+    NSDictionary *sms = [NSDictionary dictionaryWithObjectsAndKeys:@"SMS", @"label", self.employee.cellPhone, @"data", @"sms", @"command", nil];
+    [self.actions addObject:sms];
+    
+    NSDictionary *email = [NSDictionary dictionaryWithObjectsAndKeys:@"Email", @"label", self.employee.email, @"data", @"email", @"command", nil];
+    [self.actions addObject:email];
+    
+    
+    if ([self.employee.managerId intValue] > 0) {
+        NSDictionary *mgr = [NSDictionary dictionaryWithObjectsAndKeys:@"View Manager", @"label", [NSString stringWithFormat:@"%@ %@", self.manager.firstName, self.manager.lastName], @"data", @"mgr", @"command", nil];
+        [self.actions addObject:mgr];
+    }
+    
+    if ([self.reports count] > 0) {
+        NSDictionary *reportsAction = [NSDictionary dictionaryWithObjectsAndKeys:@"View Reports", @"label", [NSString stringWithFormat:@"%lu", (unsigned long)[self.reports count]], @"data", @"reports", @"command", nil];
+        [self.actions addObject:reportsAction];
     }
 }
 

@@ -12,5 +12,6 @@
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, strong) NSArray *reports;
+-(void)logoutPressed;
 
 @end

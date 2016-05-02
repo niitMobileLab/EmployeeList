@@ -17,5 +17,7 @@
 }
 -(IBAction)signInPressed:(id)sender;
 -(void)showNextScreen;
+-(void)validateCredentials:(NSString*)userName password:(NSString*)pwd;
+-(void)showAlert:(NSString*)msg;
 
 @end

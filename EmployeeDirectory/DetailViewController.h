@@ -20,4 +20,5 @@
 @property (weak, nonatomic) IBOutlet UIImageView *employeePic;
 @property (weak, nonatomic) IBOutlet UITableView *actionList;
 
+-(void)setUpActionsData;
 @end

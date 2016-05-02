@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		010486A71CD36CA600E8B18B /* DetailViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 010486A61CD36CA600E8B18B /* DetailViewControllerTests.m */; };
+		010486A91CD36CAF00E8B18B /* ReportsViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 010486A81CD36CAF00E8B18B /* ReportsViewControllerTests.m */; };
+		010486AB1CD36CB600E8B18B /* MasterViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 010486AA1CD36CB600E8B18B /* MasterViewControllerTests.m */; };
+		010486AD1CD36CBF00E8B18B /* LoginViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 010486AC1CD36CBF00E8B18B /* LoginViewControllerTests.m */; };
+		010486AF1CD379FB00E8B18B /* NetworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 010486AE1CD379FB00E8B18B /* NetworkTests.m */; };
 		010B2D8B1CD1C6B700CCDCC7 /* Employees.json in Resources */ = {isa = PBXBuildFile; fileRef = 010B2D8A1CD1C6B700CCDCC7 /* Employees.json */; };
 		010B2D8D1CD1D49500CCDCC7 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 010B2D8C1CD1D49500CCDCC7 /* libsqlite3.tbd */; };
 		010B2D8F1CD1E4F800CCDCC7 /* UserDetails.db in Resources */ = {isa = PBXBuildFile; fileRef = 010B2D8E1CD1DDDD00CCDCC7 /* UserDetails.db */; };
@@ -21,8 +26,6 @@
 		01C6B2171CC8D2510062E0C0 /* logo-3_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 01C6B2161CC8D2510062E0C0 /* logo-3_0.jpg */; };
 		01C6B21E1CC8E6AE0062E0C0 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C6B21C1CC8E6AE0062E0C0 /* Bolts.framework */; };
 		01C6B21F1CC8E6AE0062E0C0 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C6B21D1CC8E6AE0062E0C0 /* Parse.framework */; };
-		01C6B2221CC8E6F50062E0C0 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C6B2201CC8E6F50062E0C0 /* Bolts.framework */; };
-		01C6B2231CC8E6F50062E0C0 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C6B2211CC8E6F50062E0C0 /* Parse.framework */; };
 		01C6B2251CC8E9660062E0C0 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C6B2241CC8E9660062E0C0 /* AudioToolbox.framework */; };
 		01C6B2291CC8F4EA0062E0C0 /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C6B2281CC8F4EA0062E0C0 /* Utility.m */; };
 		01C6B22C1CC954BA0062E0C0 /* Logout.png in Resources */ = {isa = PBXBuildFile; fileRef = 01C6B22A1CC954BA0062E0C0 /* Logout.png */; };
@@ -74,6 +77,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		010486A61CD36CA600E8B18B /* DetailViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewControllerTests.m; sourceTree = "<group>"; };
+		010486A81CD36CAF00E8B18B /* ReportsViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportsViewControllerTests.m; sourceTree = "<group>"; };
+		010486AA1CD36CB600E8B18B /* MasterViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewControllerTests.m; sourceTree = "<group>"; };
+		010486AC1CD36CBF00E8B18B /* LoginViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewControllerTests.m; sourceTree = "<group>"; };
+		010486AE1CD379FB00E8B18B /* NetworkTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkTests.m; sourceTree = "<group>"; };
 		010B2D891CD1BF0E00CCDCC7 /* MyProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProtocol.h; sourceTree = "<group>"; };
 		010B2D8A1CD1C6B700CCDCC7 /* Employees.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Employees.json; sourceTree = "<group>"; };
 		010B2D8C1CD1D49500CCDCC7 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
@@ -88,8 +96,6 @@
 		01C6B2161CC8D2510062E0C0 /* logo-3_0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "logo-3_0.jpg"; sourceTree = "<group>"; };
 		01C6B21C1CC8E6AE0062E0C0 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = EmployeeDirectory/Bolts.framework; sourceTree = "<group>"; };
 		01C6B21D1CC8E6AE0062E0C0 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = EmployeeDirectory/Parse.framework; sourceTree = "<group>"; };
-		01C6B2201CC8E6F50062E0C0 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
-		01C6B2211CC8E6F50062E0C0 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		01C6B2241CC8E9660062E0C0 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		01C6B2271CC8F4EA0062E0C0 /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
 		01C6B2281CC8F4EA0062E0C0 /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
@@ -148,14 +154,12 @@
 				010B2D8D1CD1D49500CCDCC7 /* libsqlite3.tbd in Frameworks */,
 				01C6B2251CC8E9660062E0C0 /* AudioToolbox.framework in Frameworks */,
 				01C6B21F1CC8E6AE0062E0C0 /* Parse.framework in Frameworks */,
-				01C6B2231CC8E6F50062E0C0 /* Parse.framework in Frameworks */,
 				D97F8764183A77E700A1390E /* CoreGraphics.framework in Frameworks */,
 				D97F8768183A77E700A1390E /* CoreData.framework in Frameworks */,
 				D97F8766183A77E700A1390E /* UIKit.framework in Frameworks */,
 				D97F8762183A77E700A1390E /* Foundation.framework in Frameworks */,
 				E82F119A52ED4A327D136B4F /* libPods.a in Frameworks */,
 				01C6B21E1CC8E6AE0062E0C0 /* Bolts.framework in Frameworks */,
-				01C6B2221CC8E6F50062E0C0 /* Bolts.framework in Frameworks */,
 				5073A91F91DE232A0CE01139 /* libPods-EmployeeDirectory.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,8 +277,6 @@
 			isa = PBXGroup;
 			children = (
 				01C6B2261CC8F4CE0062E0C0 /* Utility */,
-				01C6B2201CC8E6F50062E0C0 /* Bolts.framework */,
-				01C6B2211CC8E6F50062E0C0 /* Parse.framework */,
 				01C6B20B1CC885D70062E0C0 /* View */,
 				01C6B20A1CC885B60062E0C0 /* Controllers */,
 				01C6B2091CC885B00062E0C0 /* Model */,
@@ -303,9 +305,14 @@
 		D97F878F183A77E700A1390E /* EmployeeDirectoryTests */ = {
 			isa = PBXGroup;
 			children = (
+				010486AC1CD36CBF00E8B18B /* LoginViewControllerTests.m */,
+				010486AA1CD36CB600E8B18B /* MasterViewControllerTests.m */,
+				010486A81CD36CAF00E8B18B /* ReportsViewControllerTests.m */,
+				010486A61CD36CA600E8B18B /* DetailViewControllerTests.m */,
 				D97F8795183A77E700A1390E /* EmployeeDirectoryTests.m */,
 				D97F8790183A77E700A1390E /* Supporting Files */,
 				011E3C8E1CD322E800BE3E5B /* TestPrefixHeader.pch */,
+				010486AE1CD379FB00E8B18B /* NetworkTests.m */,
 			);
 			path = EmployeeDirectoryTests;
 			sourceTree = "<group>";
@@ -542,7 +549,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				010486AF1CD379FB00E8B18B /* NetworkTests.m in Sources */,
+				010486AB1CD36CB600E8B18B /* MasterViewControllerTests.m in Sources */,
 				D97F8796183A77E700A1390E /* EmployeeDirectoryTests.m in Sources */,
+				010486AD1CD36CBF00E8B18B /* LoginViewControllerTests.m in Sources */,
+				010486A91CD36CAF00E8B18B /* ReportsViewControllerTests.m in Sources */,
+				010486A71CD36CA600E8B18B /* DetailViewControllerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

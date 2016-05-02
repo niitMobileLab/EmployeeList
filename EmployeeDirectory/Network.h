@@ -24,5 +24,6 @@
 + (id)sharedManager;
 -(BOOL)AuthenticateUser:(NSString*)userName password:(NSString*)pwd onLine:(BOOL)online;
 -(NSDictionary*)getEmployeesData;
+-(BOOL)validateOnline:(NSString*)userName password:(NSString*)pwd;
 
 @end

@@ -15,4 +15,6 @@
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 - (bool)searchForText:(NSString *)searchText;
+-(void)logoutPressed;
+- (void) logUser;
 @end

@@ -42,17 +42,17 @@ LoginViewController *loginViewController;
 
 }
 
--(void)testLoginDetails
-{
-    NSString *userName = @"admin";
-    NSString *pwd = @"nit@12345";
-    
-    BOOL isLoginSuccessful = [[Network sharedManager] AuthenticateUser:userName password:pwd onLine:YES];;
-
-    
-    XCTAssertTrue(isLoginSuccessful,@"Login fails");
-   
-}
+//-(void)testLoginDetails
+//{
+//    NSString *userName = @"admin";
+//    NSString *pwd = @"nit@12345";
+//    
+//    BOOL isLoginSuccessful = [[Network sharedManager] AuthenticateUser:userName password:pwd onLine:YES];;
+//
+//    
+//    XCTAssertTrue(isLoginSuccessful,@"Login fails");
+//   
+//}
 
 
 
@@ -69,74 +69,74 @@ LoginViewController *loginViewController;
     XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
 }
 
-- (void)testViewControllerIsComposedOfTableView {
-    
-    NSArray *subViews = viewControllerUnderTest.view.subviews;
-    
-    XCTAssertTrue([subViews containsObject:viewControllerUnderTest.tableView], @"ViewController under test is not composed of a UITableView");
-}
-
-- (void)testViewControllerConformsToTableViewDataSourceProtocol {
-    
-    XCTAssertTrue([viewControllerUnderTest conformsToProtocol:@protocol(UITableViewDataSource)], @"ViewController under test does not conform to the UITableViewDataSource prototocol");
-    
-    XCTAssertTrue([viewControllerUnderTest respondsToSelector:@selector(numberOfSectionsInTableView:)], @"ViewController under test does not implement numberOfSectionsInTableView protocol method");
-    
-    XCTAssertTrue([viewControllerUnderTest respondsToSelector:@selector(tableView:numberOfRowsInSection:)], @"ViewController under test does not implement tableView:numberOfRowsInSection protocol method");
-    
-    XCTAssertTrue([viewControllerUnderTest respondsToSelector:@selector(tableView:cellForRowAtIndexPath:)], @"ViewController under test does not implement tableView:cellForRowAtIndexPath");
-    
-    //continue with other UITableViewDataSource protocol methods of interest ...
-}
-
-- (void)testViewControllerConformsToTableViewDelegateProtocol {
-    
-    XCTAssertTrue([detailViewController conformsToProtocol:@protocol(UITableViewDelegate)], @"*****ViewController under test does not conform to the UITableViewDelegate protocol.");
-    
-    XCTAssertTrue([detailViewController respondsToSelector:@selector(tableView:didSelectRowAtIndexPath:)], @"ViewController under test does not implement tableView:didSelectRowAtIndexPath: protocol method");
-    
-    //continue with other UITableViewDelegate protocol methods of interest ...
-}
-
--(void)testSearchEmployee
-{
-    viewControllerUnderTest.managedObjectContext = self.managedObjectContext;
-    
-    [viewControllerUnderTest loadView];
-    [viewControllerUnderTest viewDidLoad];
-    bool response = [viewControllerUnderTest searchForText:@"King"];
-    XCTAssertTrue(response,@"Name doesn't exist");
-}
-
--(void)testDetailView
-{
-    [detailViewController viewDidLoad];
-}
-
-
--(void)testReports
-{
-    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"Employee" inManagedObjectContext:self.managedObjectContext];
-    
-    // Find the direct reports
-    NSFetchRequest *reportsRequest = [[NSFetchRequest alloc] init];
-    [reportsRequest setEntity:entityDescription];
-    
-    NSPredicate *reportsPredicate = [NSPredicate predicateWithFormat:@"managerId == %@", @"1"];
-    [reportsRequest setPredicate:reportsPredicate];
-    
-    NSError *error;
-    self.reports = [self.managedObjectContext executeFetchRequest:reportsRequest error:&error];
-    if([self.reports count]==12)
-    {
-        // All employees reports to CEO
-        XCTAssertTrue(true);
-    }else {
-        XCTAssertTrue(false,@"Not all employees report to CEO");
-    }
-    
-
-}
-
+//- (void)testViewControllerIsComposedOfTableView {
+//    
+//    NSArray *subViews = viewControllerUnderTest.view.subviews;
+//    
+//    XCTAssertTrue([subViews containsObject:viewControllerUnderTest.tableView], @"ViewController under test is not composed of a UITableView");
+//}
+//
+//- (void)testViewControllerConformsToTableViewDataSourceProtocol {
+//    
+//    XCTAssertTrue([viewControllerUnderTest conformsToProtocol:@protocol(UITableViewDataSource)], @"ViewController under test does not conform to the UITableViewDataSource prototocol");
+//    
+//    XCTAssertTrue([viewControllerUnderTest respondsToSelector:@selector(numberOfSectionsInTableView:)], @"ViewController under test does not implement numberOfSectionsInTableView protocol method");
+//    
+//    XCTAssertTrue([viewControllerUnderTest respondsToSelector:@selector(tableView:numberOfRowsInSection:)], @"ViewController under test does not implement tableView:numberOfRowsInSection protocol method");
+//    
+//    XCTAssertTrue([viewControllerUnderTest respondsToSelector:@selector(tableView:cellForRowAtIndexPath:)], @"ViewController under test does not implement tableView:cellForRowAtIndexPath");
+//    
+//    //continue with other UITableViewDataSource protocol methods of interest ...
+//}
+//
+//- (void)testViewControllerConformsToTableViewDelegateProtocol {
+//    
+//    XCTAssertTrue([detailViewController conformsToProtocol:@protocol(UITableViewDelegate)], @"*****ViewController under test does not conform to the UITableViewDelegate protocol.");
+//    
+//    XCTAssertTrue([detailViewController respondsToSelector:@selector(tableView:didSelectRowAtIndexPath:)], @"ViewController under test does not implement tableView:didSelectRowAtIndexPath: protocol method");
+//    
+//    //continue with other UITableViewDelegate protocol methods of interest ...
+//}
+//
+//-(void)testSearchEmployee
+//{
+//    viewControllerUnderTest.managedObjectContext = self.managedObjectContext;
+//    
+//    [viewControllerUnderTest loadView];
+//    [viewControllerUnderTest viewDidLoad];
+//    bool response = [viewControllerUnderTest searchForText:@"King"];
+//    XCTAssertTrue(response,@"Name doesn't exist");
+//}
+//
+//-(void)testDetailView
+//{
+//    [detailViewController viewDidLoad];
+//}
+//
+//
+//-(void)testReports
+//{
+//    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"Employee" inManagedObjectContext:self.managedObjectContext];
+//    
+//    // Find the direct reports
+//    NSFetchRequest *reportsRequest = [[NSFetchRequest alloc] init];
+//    [reportsRequest setEntity:entityDescription];
+//    
+//    NSPredicate *reportsPredicate = [NSPredicate predicateWithFormat:@"managerId == %@", @"1"];
+//    [reportsRequest setPredicate:reportsPredicate];
+//    
+//    NSError *error;
+//    self.reports = [self.managedObjectContext executeFetchRequest:reportsRequest error:&error];
+//    if([self.reports count]==12)
+//    {
+//        // All employees reports to CEO
+//        XCTAssertTrue(true);
+//    }else {
+//        XCTAssertTrue(false,@"Not all employees report to CEO");
+//    }
+//    
+//
+//}
+//
 
 @end

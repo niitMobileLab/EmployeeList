@@ -26,10 +26,6 @@
     // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 -(void)viewWillAppear:(BOOL)animated
 {
@@ -59,19 +55,21 @@
 
 -(IBAction)signInPressed:(id)sender
 {
-    if(!sender)
-    {
-        AppDelegate *deleg = (AppDelegate*)[[UIApplication sharedApplication]delegate];
-        deleg.TESTScheme = YES;
-    }
+
     [userNameField resignFirstResponder];
     [pwdField resignFirstResponder];
     
     [[Utility sharedManager] showLoadingScreen];
     
-    if([userNameField.text length] > 0 && [pwdField.text length] > 0)
+    [self validateCredentials:userNameField.text password:pwdField.text];
+    
+}
+
+-(void)validateCredentials:(NSString*)userName password:(NSString*)pwd
+{
+    if([userName length] > 0 && [pwd length] > 0)
     {
-        if([[Network sharedManager] AuthenticateUser:userNameField.text password:pwdField.text onLine:NO])
+        if([[Network sharedManager] AuthenticateUser:userName password:pwd onLine:NO])
         {
             NSDictionary *data = [[Network sharedManager] getEmployeesData];
             [self setUpData:data];
