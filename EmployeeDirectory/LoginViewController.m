@@ -71,7 +71,7 @@
     {
         if([[Network sharedManager] AuthenticateUser:userName password:pwd onLine:NO])
         {
-            NSDictionary *data = [[Network sharedManager] getEmployeesData:YES];
+            NSDictionary *data = [[Network sharedManager] getEmployeesData];
             [self setUpData:data];
             [self showNextScreen];
         }

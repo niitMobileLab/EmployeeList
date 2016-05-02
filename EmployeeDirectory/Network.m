@@ -110,7 +110,7 @@
 }
 
 // Get Employees Data like their First Name, Last Name , Phone number etc from the local file or Back4app cloud
--(NSDictionary*)getEmployeesData:(BOOL)corrupted
+-(NSDictionary*)getEmployeesData
 {
     NSDictionary *jsonObject;
     
@@ -127,18 +127,12 @@
         
     }
     // When offline then data is retrieved from Local JSON File
-    else if(!corrupted)
+    else
     {
         NSString *path = [[NSBundle mainBundle] pathForResource:@"Employees" ofType:@"json"];
         NSData *data = [[NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil] dataUsingEncoding:NSUTF8StringEncoding];
         jsonObject=[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
 
-    }
-    else
-    {
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"CorruptedEmployees" ofType:@"json"];
-        NSData *data = [[NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil] dataUsingEncoding:NSUTF8StringEncoding];
-        jsonObject=[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
     }
     return jsonObject;
 }
