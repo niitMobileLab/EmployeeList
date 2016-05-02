@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd version="oclint-0.10.2"><file name="/Users/naveen/Documents/EmployeeList/EmployeeDirectory/LoginViewController.m">
+<violation begincolumn="1" endcolumn="816" beginline="161" endline="161" priority="5" rule="long line" ruleset="size" >
+Line with 816 characters exceeds limit of 250
+</violation>
+</file>
+
+<file name="/Users/naveen/Documents/EmployeeList/EmployeeDirectory/LoginViewController.m">
+<violation begincolumn="1" endcolumn="714" beginline="162" endline="162" priority="5" rule="long line" ruleset="size" >
+Line with 714 characters exceeds limit of 250
+</violation>
+</file>
+
+<file name="/Users/naveen/Documents/EmployeeList/EmployeeDirectory/LoginViewController.m">
+<violation begincolumn="1" endcolumn="306" beginline="163" endline="163" priority="5" rule="long line" ruleset="size" >
+Line with 306 characters exceeds limit of 250
+</violation>
+</file>
+
+<file name="/Users/naveen/Documents/EmployeeList/EmployeeDirectory/LoginViewController.m">
+<violation begincolumn="1" endcolumn="2246" beginline="168" endline="168" priority="5" rule="long line" ruleset="size" >
+Line with 2246 characters exceeds limit of 250
+</violation>
+</file>
+
+<file name="/Users/naveen/Documents/EmployeeList/EmployeeDirectory/LoginViewController.m">
+<violation begincolumn="35" endcolumn="74" beginline="137" endline="137" priority="5" rule="replace with object subscripting" ruleset="migration" >
+
+</violation>
+</file>
+
+<file name="/Users/naveen/Documents/EmployeeList/EmployeeDirectory/LoginViewController.m">
+<violation begincolumn="5" endcolumn="27" beginline="101" endline="108" priority="5" rule="short variable name" ruleset="naming" >
+Variable name with 2 characters is shorter than the threshold of 3
+</violation>
+</file>
+
+<file name="/Users/naveen/Documents/EmployeeList/EmployeeDirectory/DetailViewController.m">
+<violation begincolumn="50" endcolumn="5" beginline="159" endline="161" priority="3" rule="empty if statement" ruleset="empty" >
+
+</violation>
+</file>
+
+<file name="/Users/naveen/Documents/EmployeeList/EmployeeDirectory/DetailViewController.m">
+<violation begincolumn="1" endcolumn="1" beginline="145" endline="181" priority="3" rule="high ncss method" ruleset="size" >
+Method of 31 non-commenting source statements exceeds limit of 30
+</violation>
+</file>
+
+<file name="/Users/naveen/Documents/EmployeeList/EmployeeDirectory/DetailViewController.m">
+<violation begincolumn="32" endcolumn="161" beginline="72" endline="72" priority="5" rule="replace with container literal" ruleset="migration" >
+
+</violation>
+</file>
+
+<file name="/Users/naveen/Documents/EmployeeList/EmployeeDirectory/DetailViewController.m">
+<violation begincolumn="30" endcolumn="155" beginline="75" endline="75" priority="5" rule="replace with container literal" ruleset="migration" >
+
+</violation>
+</file>
+
+<file name="/Users/naveen/Documents/EmployeeList/EmployeeDirectory/DetailViewController.m">
+<violation begincolumn="25" endcolumn="143" beginline="78" endline="78" priority="5" rule="replace with container literal" ruleset="migration" >
+
+</violation>
+</file>
+
+<file name="/Users/naveen/Documents/EmployeeList/EmployeeDirectory/DetailViewController.m">
+<violation begincolumn="27" endcolumn="145" beginline="81" endline="81" priority="5" rule="replace with container literal" ruleset="migration" >
+
+</violation>
+</file>
+
+<file name="/Users/naveen/Documents/EmployeeList/EmployeeDirectory/DetailViewController.m">
+<violation begincolumn="29" endcolumn="216" beginline="86" endline="86" priority="5" rule="replace with container literal" ruleset="migration" >
+
+</violation>
+</file>
+
+<file name="/Users/naveen/Documents/EmployeeList/EmployeeDirectory/DetailViewController.m">
+<violation begincolumn="39" endcolumn="218" beginline="91" endline="91" priority="5" rule="replace with container literal" ruleset="migration" >
+
+</violation>
+</file>
+
+<file name="/Users/naveen/Documents/EmployeeList/EmployeeDirectory/DetailViewController.m">
+<violation begincolumn="32" endcolumn="54" beginline="57" endline="57" priority="5" rule="replace with object subscripting" ruleset="migration" >
+
+</violation>
+</file>
+
+<file name="/Users/naveen/Documents/EmployeeList/EmployeeDirectory/MasterViewController.m">
+<violation begincolumn="32" endcolumn="77" beginline="198" endline="198" priority="5" rule="replace with container literal" ruleset="migration" >
+
+</violation>
+</file>
+
+<file name="/Users/naveen/Documents/EmployeeList/EmployeeDirectory/MasterViewController.m">
+<violation begincolumn="5" endcolumn="16" beginline="179" endline="182" priority="5" rule="redundant if statement" ruleset="redundant" >
+
+</violation>
+</file>
+
+<file name="/Users/naveen/Documents/EmployeeList/EmployeeDirectory/MasterViewController.m">
+<violation begincolumn="12" endcolumn="5" beginline="94" endline="96" priority="5" rule="unnecessary else statement" ruleset="redundant" >
+
+</violation>
+</file>
+
+<file name="/Users/naveen/Documents/EmployeeList/EmployeeDirectory/MasterViewController.m">
+<violation begincolumn="9" endcolumn="16" beginline="182" endline="182" priority="5" rule="unnecessary else statement" ruleset="redundant" >
+
+</violation>
+</file>
+
+<file name="/Users/naveen/Documents/EmployeeList/EmployeeDirectory/MasterViewController.m">
+<violation begincolumn="34" endcolumn="62" beginline="156" endline="156" priority="5" rule="unused method parameter" ruleset="unused" >
+The parameter 'controller' is unused.
+</violation>
+</file>
+
+<file name="/Users/naveen/Documents/EmployeeList/EmployeeDirectory/AppDelegate.m">
+<violation begincolumn="5" endcolumn="5" beginline="25" endline="25" priority="3" rule="double negative" ruleset="basic" >
+
+</violation>
+</file>
+
+<file name="/Users/naveen/Documents/EmployeeList/EmployeeDirectory/AppDelegate.m">
+<violation begincolumn="5" endcolumn="5" beginline="25" endline="25" priority="3" rule="multiple unary operator" ruleset="basic" >
+
+</violation>
+</file>
+
+<file name="/Users/naveen/Documents/EmployeeList/EmployeeDirectory/Utility.m">
+<violation begincolumn="5" endcolumn="118" beginline="75" endline="75" priority="5" rule="long variable name" ruleset="naming" >
+Variable name with 22 characters is longer than the threshold of 20
+</violation>
+</file>
+
+<file name="/Users/naveen/Documents/EmployeeList/EmployeeDirectory/Utility.m">
+<violation begincolumn="5" endcolumn="5" beginline="96" endline="96" priority="3" rule="ivar assignment outside accessors or init" ruleset="convention" >
+
+</violation>
+</file>
+
+<file name="/Users/naveen/Documents/EmployeeList/EmployeeDirectory/Utility.m">
+<violation begincolumn="31" endcolumn="53" beginline="29" endline="29" priority="5" rule="replace with object subscripting" ruleset="migration" >
+
+</violation>
+</file>
+
+<file name="/Users/naveen/Documents/EmployeeList/EmployeeDirectory/Network.m">
+<violation begincolumn="17" endcolumn="18" beginline="46" endline="46" priority="5" rule="inverted logic" ruleset="convention" >
+
+</violation>
+</file>
+
+<file name="/Users/naveen/Documents/EmployeeList/EmployeeDirectory/Network.m">
+<violation begincolumn="1" endcolumn="1" beginline="33" endline="90" priority="5" rule="long method" ruleset="size" >
+Method with 57 lines exceeds limit of 50
+</violation>
+</file>
+
+<file name="/Users/naveen/Documents/EmployeeList/EmployeeDirectory/Network.m">
+<violation begincolumn="21" endcolumn="21" beginline="58" endline="58" priority="3" rule="ivar assignment outside accessors or init" ruleset="convention" >
+
+</violation>
+</file>
+
+<file name="/Users/naveen/Documents/EmployeeList/EmployeeDirectory/Network.m">
+<violation begincolumn="38" endcolumn="62" beginline="51" endline="51" priority="5" rule="replace with object subscripting" ruleset="migration" >
+
+</violation>
+</file>
+
+<file name="/Users/naveen/Documents/EmployeeList/EmployeeDirectory/Network.m">
+<violation begincolumn="25" endcolumn="49" beginline="58" endline="58" priority="5" rule="replace with object subscripting" ruleset="migration" >
+
+</violation>
+</file>
+
+<file name="/Users/naveen/Documents/EmployeeList/EmployeeDirectory/Network.m">
+<violation begincolumn="17" endcolumn="31" beginline="48" endline="48" priority="5" rule="short variable name" ruleset="naming" >
+Variable name with 1 characters is shorter than the threshold of 3
+</violation>
+</file>
+
+</pmd>

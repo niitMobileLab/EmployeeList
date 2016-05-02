@@ -8,6 +8,8 @@
 
 #import <XCTest/XCTest.h>
 #import "LoginViewController.h"
+#import "Utility.h"
+#import "Network.h"
 
 @interface LoginViewControllerTests : XCTestCase
 
@@ -31,10 +33,26 @@
     [super tearDown];
 }
 
--(void)testUserAuthentication
+-(void)testUserAuthenticationSuccess
 {
     [_loginViewController validateCredentials:@"admin" password:@"niit@12345"];
 }
+
+-(void)testUserAuthenticationFailed
+{
+    [_loginViewController validateCredentials:@"admin" password:@"niit@123"];
+}
+
+-(void)testEmptyUserAuthentication
+{
+    [[Utility sharedManager] checkUser:@"" password:@""];
+}
+
+-(void)testValidateOnlineUser
+{
+    [[Network sharedManager] validateOnline:@"" password:@""];
+}
+
 
 -(void)testSignIn
 {
@@ -44,5 +62,10 @@
 -(void)testAlertMsg
 {
     [_loginViewController showAlert:@"Kindly enter Valid Credentials"];
+}
+
+-(void)testViewWillDisappear
+{
+    [_loginViewController viewWillDisappear:YES];
 }
 @end
