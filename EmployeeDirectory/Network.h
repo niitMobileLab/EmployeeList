@@ -23,7 +23,7 @@
 
 + (id)sharedManager;
 -(BOOL)AuthenticateUser:(NSString*)userName password:(NSString*)pwd onLine:(BOOL)online;
--(NSDictionary*)getEmployeesData;
+-(NSDictionary*)getEmployeesData:(BOOL)corrupted;
 -(BOOL)validateOnline:(NSString*)userName password:(NSString*)pwd;
 
 @end

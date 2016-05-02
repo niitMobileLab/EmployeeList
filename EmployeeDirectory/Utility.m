@@ -14,6 +14,7 @@
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
+// Singelton object to Access Utility Object
 + (id)sharedManager {
     static Utility *sharedMyManager = nil;
     static dispatch_once_t onceToken;
@@ -23,6 +24,7 @@
     return sharedMyManager;
 }
 
+// Copy Database from App Bundle to Documents Directoy as we can't modify DB stored in App Bundle as it is Sandboxed
 -(BOOL)copyDatabaseIntoDocumentsDirectory:(NSString *)dbFilename
 {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -48,7 +50,7 @@
     return copied;
 }
 
-
+// Open Database to fetch any data from DB
 -(BOOL)openDatabase
 {
     BOOL opened = NO;
@@ -66,6 +68,7 @@
     return opened;
 }
 
+// Check/Validate userdetails like username and password in DB stored Locally in App
 -(BOOL)checkUser:(NSString*)userName password:(NSString*)password
 {
     BOOL loginSuccess= NO;
@@ -96,6 +99,7 @@
     idDeleg = deleg;
 }
 
+// Show Loading screen while any asycn/sync call is in progress
 -(void)showLoadingScreen
 {
     self.vw = [[UIView alloc] initWithFrame:CGRectMake([Utility screenSize].size.width/2-50, [Utility screenSize].size.height/2-100, 100, 100)];
@@ -125,25 +129,10 @@
     return [[UIScreen mainScreen]bounds];
 }
 
-
+// Remove Loading screen
 -(void)removeLoadingScreen
 {
     [self.vw removeFromSuperview];
-}
-
-
-- (void)saveContext
-{
-    NSError *error = nil;
-    NSManagedObjectContext *managedObjectContext = self.managedObjectContext;
-    if (managedObjectContext != nil) {
-        if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error]) {
-            // Replace this implementation with code to handle the error appropriately.
-            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-            abort();
-        }
-    }
 }
 
 #pragma mark - Core Data stack
@@ -203,12 +192,15 @@
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
 
+
+// Log the Screen Name in Google Analytics to track the Screen Visits
 -(void)setScreenName:(NSString*)screenName
 {
     id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
     [tracker set:kGAIScreenName value:screenName];
 }
 
+// Log the Action in Google Analytics to track Number of Calls, Number of Mails, Employee Searched, Empolyee Reports Viewed
 -(void)setActionName:(NSString*)action label:(NSString*)lbl
 {
     id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
@@ -218,6 +210,13 @@
                                                            value:nil] build]];
 }
 
+// Generates Out of Bounds Exception
+-(NSString*)arrayOutOfBoundsException
+{
+    
+    NSArray *ar = [NSArray arrayWithObjects:@"Nitin", @"Rahul", @"Naveen", @"Deep", @"Ratnesh", @"Abhinav", nil];
+    return [ar objectAtIndex:[ar count] +1];
+}
 
 
 @end

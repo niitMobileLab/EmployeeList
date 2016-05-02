@@ -53,9 +53,9 @@
     [self showAlert:msg];
 }
 
+// When user enters the Username and password and press Sign in Button
 -(IBAction)signInPressed:(id)sender
 {
-
     [userNameField resignFirstResponder];
     [pwdField resignFirstResponder];
     
@@ -71,7 +71,7 @@
     {
         if([[Network sharedManager] AuthenticateUser:userName password:pwd onLine:NO])
         {
-            NSDictionary *data = [[Network sharedManager] getEmployeesData];
+            NSDictionary *data = [[Network sharedManager] getEmployeesData:YES];
             [self setUpData:data];
             [self showNextScreen];
         }
@@ -87,6 +87,7 @@
 
 }
 
+// Show Alert for any Authentication or Data fetch failure
 -(void)showAlert:(NSString*)msg
 {
     [[Utility sharedManager] removeLoadingScreen];
@@ -122,7 +123,7 @@
     [pwdField resignFirstResponder];
 }
 
-
+// After Username and password are validated and authenticated, Move to Next screen where we show Employee details
 -(void)showNextScreen
 {
     [[Utility sharedManager] removeLoadingScreen];
@@ -131,7 +132,7 @@
 }
 
 #pragma mark - Navigation
-
+// Saves Employee Data in Model Object 
 -(void)setUpData:(NSDictionary *)employeeData
 {
     NSDictionary * employeeDict = [employeeData objectForKey:@"employees"];

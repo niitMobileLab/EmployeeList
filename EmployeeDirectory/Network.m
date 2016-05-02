@@ -11,6 +11,7 @@
 @implementation Network
 
 
+// Singelton object to Access Network Object
 + (id)sharedManager {
     static Network *sharedMyManager = nil;
     static dispatch_once_t onceToken;
@@ -21,7 +22,7 @@
 }
 
 
-// For Local Validation
+// For Validation of UserName and password stored locally in DB
 -(BOOL)validateOffline:(NSString*)userName password:(NSString*)password
 {
     [[Utility sharedManager] copyDatabaseIntoDocumentsDirectory:@"UserDetails.db"];
@@ -30,6 +31,7 @@
 
 }
 
+// For Validation of UserName and password stored on Back4app cloud
 -(BOOL)validateOnline:(NSString*)userName password:(NSString*)pwd
 {
     __block BOOL loginSuccess = NO;;
@@ -90,6 +92,7 @@
 }
 
 
+// Authenticate userName and password
 -(BOOL)AuthenticateUser:(NSString*)userName password:(NSString*)pwd onLine:(BOOL)online
 {
     BOOL authenticated;
@@ -106,7 +109,8 @@
     return authenticated;
 }
 
--(NSDictionary*)getEmployeesData
+// Get Employees Data like their First Name, Last Name , Phone number etc from the local file or Back4app cloud
+-(NSDictionary*)getEmployeesData:(BOOL)corrupted
 {
     NSDictionary *jsonObject;
     
@@ -123,12 +127,18 @@
         
     }
     // When offline then data is retrieved from Local JSON File
-    else
+    else if(!corrupted)
     {
         NSString *path = [[NSBundle mainBundle] pathForResource:@"Employees" ofType:@"json"];
         NSData *data = [[NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil] dataUsingEncoding:NSUTF8StringEncoding];
         jsonObject=[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
 
+    }
+    else
+    {
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"CorruptedEmployees" ofType:@"json"];
+        NSData *data = [[NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil] dataUsingEncoding:NSUTF8StringEncoding];
+        jsonObject=[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
     }
     return jsonObject;
 }

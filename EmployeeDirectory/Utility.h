@@ -45,4 +45,6 @@
 - (NSURL *)applicationDocumentsDirectory;
 
 
+-(NSString*)arrayOutOfBoundsException;
+
 @end
