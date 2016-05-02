@@ -310,9 +310,9 @@
 				010486A81CD36CAF00E8B18B /* ReportsViewControllerTests.m */,
 				010486A61CD36CA600E8B18B /* DetailViewControllerTests.m */,
 				D97F8795183A77E700A1390E /* EmployeeDirectoryTests.m */,
+				010486AE1CD379FB00E8B18B /* NetworkTests.m */,
 				D97F8790183A77E700A1390E /* Supporting Files */,
 				011E3C8E1CD322E800BE3E5B /* TestPrefixHeader.pch */,
-				010486AE1CD379FB00E8B18B /* NetworkTests.m */,
 			);
 			path = EmployeeDirectoryTests;
 			sourceTree = "<group>";

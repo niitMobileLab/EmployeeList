@@ -1,5 +1,5 @@
 projectKey=EmployeeDirectory
 serverUrl=http://localhost:9000
 dashboardUrl=http://localhost:9000/dashboard/index/EmployeeDirectory
-ceTaskId=AVRha32Bgynix-1_sR32
-ceTaskUrl=http://localhost:9000/api/ce/task?id=AVRha32Bgynix-1_sR32
+ceTaskId=AVRw2SZggynix-1_sR4s
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AVRw2SZggynix-1_sR4s

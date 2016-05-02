@@ -150,7 +150,7 @@ echo "Running run-sonar.sh..."
 # xctool, gcovr and oclint installed
 testIsInstalled xcodebuild
 testIsInstalled gcovr
-testIsInstalled oclint
+testIsInstalled oclint-0.10.2
 testIsInstalled oclint-xcodebuild
 
 # sonar-project.properties in current directory
@@ -353,7 +353,7 @@ if [ "$oclint" = "on" ]; then
             echo -n "Path included in oclint analysis is:$includedCommandLineFlags"
         fi
 		# Run OCLint with the right set of compiler options
-	    runCommand no oclint-json-compilation-database -v $includedCommandLineFlags -- -rc LONG_LINE=$longLineThreshold -max-priority-1 $maxPriority -max-priority-2 $maxPriority -max-priority-3 $maxPriority -report-type pmd -o sonar-reports/$(echo $word | sed 's/\//_/g')-oclint.xml
+	    runCommand no oclint-json-compilation-database -v $includedCommandLineFlags -- -rc LONG_LINE=$longLineThreshold -max-priority-1 $maxPriority -max-priority-2 $maxPriority -max-priority-3 $maxPriority -report-type pmd -o sonar-reports/oclint.xml
 
 	done < tmpFileRunSonarSh
 	rm -rf tmpFileRunSonarSh

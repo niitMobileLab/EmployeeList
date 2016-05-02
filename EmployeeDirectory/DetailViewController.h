@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *employeePic;
 @property (weak, nonatomic) IBOutlet UITableView *actionList;
+-(void)logoutPressed;
 
 -(void)setUpActionsData;
 @end

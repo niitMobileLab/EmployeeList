@@ -114,12 +114,12 @@
     XCTAssertTrue([_detailViewController tableView:_detailViewController.actionList numberOfRowsInSection:0]==expectedRows, @"Table has %ld rows but it should have %ld", (long)[_detailViewController tableView:_detailViewController.actionList numberOfRowsInSection:0], (long)expectedRows);
 }
 
-//- (void)testTableViewHeightForRowAtIndexPath
-//{
-//    CGFloat expectedHeight = 44.0;
-//    CGFloat actualHeight = _masterViewController.tableView.rowHeight;
-//    XCTAssertEqual(expectedHeight, actualHeight, @"Cell should have %f height, but they have %f", expectedHeight, actualHeight);
-//}
+- (void)testTableViewHeightForRowAtIndexPath
+{
+    CGFloat expectedHeight = 0.01f;
+    CGFloat actualHeight = _detailViewController.actionList.rowHeight;
+    XCTAssertEqual(expectedHeight, actualHeight, @"Cell should have %f height, but they have %f", expectedHeight, actualHeight);
+}
 
 - (void)testTableViewCellCreateCellsWithReuseIdentifier
 {
@@ -128,6 +128,14 @@
     NSString *expectedReuseIdentifier = [NSString stringWithFormat:@"%ld/%ld",(long)indexPath.section,(long)indexPath.row];
     XCTAssertTrue([cell.reuseIdentifier isEqualToString:expectedReuseIdentifier], @"Table does not create reusable cells");
 }
+
+- (void)testNumberOfRowsInSection
+{
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+    NSInteger numberOfRows = [_detailViewController.actionList numberOfRowsInSection:[indexPath section]];
+    XCTAssertTrue((numberOfRows>1), @"Number of rows is not assigned correctly");
+}
+
 
 -(void)testDidSelectCell
 {
@@ -138,6 +146,11 @@
     
     XCTAssertTrue(true,@"Table rows can't be selected");
     
+}
+
+-(void)testLogoutPressed
+{
+    [_detailViewController logoutPressed];
 }
 
 
