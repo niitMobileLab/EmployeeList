@@ -41,8 +41,9 @@
 
 
 // For CoreData Objects
-- (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
 
+
+-(NSString*)arrayOutOfBoundsException;
 
 @end

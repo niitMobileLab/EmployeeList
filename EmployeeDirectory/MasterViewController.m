@@ -40,6 +40,10 @@
     // To Force the Exception, Uncomment below line of code
     //[[Crashlytics sharedInstance] throwException];
     
+    // To Force the Array Out of Bound Exception, Uncomment below line of code
+    //[[Utility sharedManager ] arrayOutOfBoundsException];
+    
+    
     self.navigationItem.hidesBackButton = YES;
     [self logUser];
 
@@ -138,17 +142,14 @@
         
         [[Utility sharedManager] setActionName:@"Searched Selected EMP" label:employee.firstName];
 
-
     } else {
         NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
         employee = [self.employees objectAtIndex:indexPath.row];
         
         [[Utility sharedManager] setActionName:@"Selected EMP" label:employee.firstName];
-
     }
-    
-    DetailViewController *detailVC = [segue destinationViewController];
 
+    DetailViewController *detailVC = [segue destinationViewController];
     detailVC.managedObjectContext = self.managedObjectContext;
     detailVC.employee = employee;
 }
@@ -161,7 +162,6 @@
 
 - (bool)searchForText:(NSString *)searchText
 {
-    
     NSLog(@"Search for text %@", searchText);
     
     if (self.managedObjectContext)
@@ -181,7 +181,6 @@
     else
         return NO;
 }
-
 
 - (NSFetchRequest *)searchFetchRequest
 {

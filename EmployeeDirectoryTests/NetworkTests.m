@@ -31,4 +31,11 @@
     [_networkUtils validateOnline:@"admin" password:@"niit@12345"];
 }
 
+-(void)testGetEmployeeData
+{
+    NSDictionary *empDict =[_networkUtils getEmployeesData];
+    XCTAssertTrue([empDict count] > 0, @"No Employee Details Found");
+}
+
+
 @end
