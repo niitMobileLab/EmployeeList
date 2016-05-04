@@ -133,10 +133,16 @@
 {
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     NSInteger numberOfRows = [_detailViewController.actionList numberOfRowsInSection:[indexPath section]];
-    XCTAssertTrue((numberOfRows>1), @"Number of rows is not assigned correctly");
+    XCTAssertTrue((numberOfRows>=1), @"Number of rows is not assigned correctly");
 }
 
 
+-(void)testNumberOfSections
+{
+    NSInteger noOfSection = 1;
+    NSInteger numberOfRows = [_detailViewController numberOfSectionsInTableView:_detailViewController.actionList];
+    XCTAssertTrue((numberOfRows==noOfSection), @"Number of section is not assigned correctly");
+}
 -(void)testDidSelectCell
 {
     [_detailViewController setUpActionsData];

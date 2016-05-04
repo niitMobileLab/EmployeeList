@@ -1,14 +1,15 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<testsuites tests='57' failures='20'>
-  <testsuite name='DetailViewControllerTests' tests='17' failures='8'>
-    <testcase classname='DetailViewControllerTests' name='testDidSelectCell' time='0.606'/>
-    <testcase classname='DetailViewControllerTests' name='testLogoutPressed' time='0.006'/>
+<testsuites tests='59' failures='20'>
+  <testsuite name='DetailViewControllerTests' tests='18' failures='8'>
+    <testcase classname='DetailViewControllerTests' name='testDidSelectCell' time='0.614'/>
+    <testcase classname='DetailViewControllerTests' name='testLogoutPressed' time='0.095'/>
     <testcase classname='DetailViewControllerTests' name='testNumberOfRowsInSection'>
-      <failure message='(((numberOfRows&gt;1)) is true) failed - Number of rows is not assigned correctly'>EmployeeDirectoryTests/DetailViewControllerTests.m:136</failure>
+      <failure message='(((numberOfRows&gt;=1)) is true) failed - Number of rows is not assigned correctly'>EmployeeDirectoryTests/DetailViewControllerTests.m:136</failure>
     </testcase>
+    <testcase classname='DetailViewControllerTests' name='testNumberOfSections' time='0.005'/>
     <testcase classname='DetailViewControllerTests' name='testParentViewHasTableViewSubview' time='0.004'/>
     <testcase classname='DetailViewControllerTests' name='testTableRowMove'>
-      <failure message='(([_detailViewController tableView:_detailViewController.actionList canMoveRowAtIndexPath:indexPath]) is true) failed: throwing &quot;-[DetailViewController tableView:canMoveRowAtIndexPath:]: unrecognized selector sent to instance 0x7fb91520a710&quot; - Table rows can&apos;t be moved'>EmployeeDirectoryTests/DetailViewControllerTests.m:107</failure>
+      <failure message='(([_detailViewController tableView:_detailViewController.actionList canMoveRowAtIndexPath:indexPath]) is true) failed: throwing &quot;-[DetailViewController tableView:canMoveRowAtIndexPath:]: unrecognized selector sent to instance 0x7ffbe51beb50&quot; - Table rows can&apos;t be moved'>EmployeeDirectoryTests/DetailViewControllerTests.m:107</failure>
     </testcase>
     <testcase classname='DetailViewControllerTests' name='testTableViewCellCreateCellsWithReuseIdentifier'>
       <failure message='failed: caught &quot;NSInternalInconsistencyException&quot;, &quot;request for rect at invalid index path (&lt;NSIndexPath: 0xc000000000000016&gt; {length = 2, path = 0 - 0})&quot;'>EmployeeDirectoryTests/DetailViewControllerTests.m:127</failure>
@@ -23,17 +24,17 @@
       <failure message='(([_detailViewController tableView:_detailViewController.actionList numberOfRowsInSection:0]==expectedRows) is true) failed - Table has 0 rows but it should have 12'>EmployeeDirectoryTests/DetailViewControllerTests.m:114</failure>
     </testcase>
     <testcase classname='DetailViewControllerTests' name='testTableViewRowEditing'>
-      <failure message='(([_detailViewController tableView:_detailViewController.actionList canEditRowAtIndexPath:indexPath]) is true) failed: throwing &quot;-[DetailViewController tableView:canEditRowAtIndexPath:]: unrecognized selector sent to instance 0x7fb915367510&quot; - Table doesn&apos;t have editing rows'>EmployeeDirectoryTests/DetailViewControllerTests.m:100</failure>
+      <failure message='(([_detailViewController tableView:_detailViewController.actionList canEditRowAtIndexPath:indexPath]) is true) failed: throwing &quot;-[DetailViewController tableView:canEditRowAtIndexPath:]: unrecognized selector sent to instance 0x7ffbe51e2580&quot; - Table doesn&apos;t have editing rows'>EmployeeDirectoryTests/DetailViewControllerTests.m:100</failure>
     </testcase>
     <testcase classname='DetailViewControllerTests' name='testThatTableViewHasDataSource'>
       <failure message='((_detailViewController.actionList.dataSource) != nil) failed - Table datasource cannot be nil'>EmployeeDirectoryTests/DetailViewControllerTests.m:83</failure>
     </testcase>
-    <testcase classname='DetailViewControllerTests' name='testThatTableViewLoads' time='0.005'/>
-    <testcase classname='DetailViewControllerTests' name='testThatViewConformsToUITableViewDataSource' time='0.004'/>
-    <testcase classname='DetailViewControllerTests' name='testThatViewConformsToUITableViewDelegate' time='0.005'/>
-    <testcase classname='DetailViewControllerTests' name='testThatViewLoads' time='0.005'/>
-    <testcase classname='DetailViewControllerTests' name='testViewDidLoad' time='0.118'/>
-    <testcase classname='DetailViewControllerTests' name='testViewwillAppear' time='0.006'/>
+    <testcase classname='DetailViewControllerTests' name='testThatTableViewLoads' time='0.006'/>
+    <testcase classname='DetailViewControllerTests' name='testThatViewConformsToUITableViewDataSource' time='0.006'/>
+    <testcase classname='DetailViewControllerTests' name='testThatViewConformsToUITableViewDelegate' time='0.006'/>
+    <testcase classname='DetailViewControllerTests' name='testThatViewLoads' time='0.006'/>
+    <testcase classname='DetailViewControllerTests' name='testViewDidLoad' time='0.240'/>
+    <testcase classname='DetailViewControllerTests' name='testViewwillAppear' time='0.019'/>
   </testsuite>
   <testsuite name='EmployeeDirectoryTests' tests='1' failures='1'>
     <testcase classname='EmployeeDirectoryTests' name='testExample'>
@@ -41,55 +42,56 @@
     </testcase>
   </testsuite>
   <testsuite name='LoginViewControllerTests' tests='7' failures='1'>
-    <testcase classname='LoginViewControllerTests' name='testAlertMsg' time='0.091'/>
-    <testcase classname='LoginViewControllerTests' name='testEmptyUserAuthentication' time='0.004'/>
-    <testcase classname='LoginViewControllerTests' name='testSignIn' time='0.144'/>
-    <testcase classname='LoginViewControllerTests' name='testUserAuthenticationFailed' time='0.034'/>
+    <testcase classname='LoginViewControllerTests' name='testAlertMsg' time='0.050'/>
+    <testcase classname='LoginViewControllerTests' name='testEmptyUserAuthentication' time='0.005'/>
+    <testcase classname='LoginViewControllerTests' name='testSignIn' time='0.215'/>
+    <testcase classname='LoginViewControllerTests' name='testUserAuthenticationFailed' time='0.025'/>
     <testcase classname='LoginViewControllerTests' name='testUserAuthenticationSuccess'>
       <failure message='failed: caught &quot;NSGenericException&quot;, &quot;Could not find a navigation controller for segue &apos;Employees&apos;. Push segues can only be used when the source controller is managed by an instance of UINavigationController.&quot;'>EmployeeDirectoryTests/LoginViewControllerTests.m:38</failure>
     </testcase>
-    <testcase classname='LoginViewControllerTests' name='testValidateOnlineUser' time='0.003'/>
-    <testcase classname='LoginViewControllerTests' name='testViewWillDisappear' time='0.005'/>
+    <testcase classname='LoginViewControllerTests' name='testValidateOnlineUser' time='0.004'/>
+    <testcase classname='LoginViewControllerTests' name='testViewWillDisappear' time='0.004'/>
   </testsuite>
   <testsuite name='MasterViewControllerTests' tests='16' failures='5'>
-    <testcase classname='MasterViewControllerTests' name='testLogoutPressed' time='0.098'/>
-    <testcase classname='MasterViewControllerTests' name='testLogUser' time='0.009'/>
+    <testcase classname='MasterViewControllerTests' name='testLogoutPressed' time='0.084'/>
+    <testcase classname='MasterViewControllerTests' name='testLogUser' time='0.007'/>
     <testcase classname='MasterViewControllerTests' name='testParentViewHasTableViewSubview'>
       <failure message='(([subviews containsObject:_masterViewController.tableView]) is true) failed - View does not have a table subview'>EmployeeDirectoryTests/MasterViewControllerTests.m:74</failure>
     </testcase>
-    <testcase classname='MasterViewControllerTests' name='testSearchEmployee' time='0.057'/>
+    <testcase classname='MasterViewControllerTests' name='testSearchEmployee' time='0.051'/>
     <testcase classname='MasterViewControllerTests' name='testTableRowMove'>
       <failure message='(([_masterViewController tableView:_masterViewController.tableView canMoveRowAtIndexPath:indexPath]) is true) failed - Table rows can&apos;t be moved'>EmployeeDirectoryTests/MasterViewControllerTests.m:115</failure>
     </testcase>
     <testcase classname='MasterViewControllerTests' name='testTableViewCellCreateCellsWithReuseIdentifier'>
       <failure message='failed: caught &quot;NSInternalInconsistencyException&quot;, &quot;request for rect at invalid index path (&lt;NSIndexPath: 0xc000000000000016&gt; {length = 2, path = 0 - 0})&quot;'>EmployeeDirectoryTests/MasterViewControllerTests.m:135</failure>
     </testcase>
-    <testcase classname='MasterViewControllerTests' name='testTableViewIsConnectedToDelegate' time='0.005'/>
+    <testcase classname='MasterViewControllerTests' name='testTableViewIsConnectedToDelegate' time='0.008'/>
     <testcase classname='MasterViewControllerTests' name='testTableViewNumberOfRowsInSection'>
       <failure message='(([_masterViewController tableView:_masterViewController.tableView numberOfRowsInSection:0]==expectedRows) is true) failed - Table has 0 rows but it should have 12'>EmployeeDirectoryTests/MasterViewControllerTests.m:122</failure>
     </testcase>
     <testcase classname='MasterViewControllerTests' name='testTableViewRowEditing'>
       <failure message='(([_masterViewController tableView:_masterViewController.tableView canEditRowAtIndexPath:indexPath]) is true) failed - Table doesn&apos;t have editing rows'>EmployeeDirectoryTests/MasterViewControllerTests.m:108</failure>
     </testcase>
-    <testcase classname='MasterViewControllerTests' name='testThatTableViewHasDataSource' time='0.007'/>
-    <testcase classname='MasterViewControllerTests' name='testThatTableViewLoads' time='0.007'/>
-    <testcase classname='MasterViewControllerTests' name='testThatViewConformsToUITableViewDataSource' time='0.007'/>
-    <testcase classname='MasterViewControllerTests' name='testThatViewConformsToUITableViewDelegate' time='0.006'/>
+    <testcase classname='MasterViewControllerTests' name='testThatTableViewHasDataSource' time='0.005'/>
+    <testcase classname='MasterViewControllerTests' name='testThatTableViewLoads' time='0.005'/>
+    <testcase classname='MasterViewControllerTests' name='testThatViewConformsToUITableViewDataSource' time='0.005'/>
+    <testcase classname='MasterViewControllerTests' name='testThatViewConformsToUITableViewDelegate' time='0.005'/>
     <testcase classname='MasterViewControllerTests' name='testThatViewLoads' time='0.006'/>
-    <testcase classname='MasterViewControllerTests' name='testViewDidLoad' time='0.008'/>
-    <testcase classname='MasterViewControllerTests' name='testViewwillAppear' time='0.007'/>
+    <testcase classname='MasterViewControllerTests' name='testViewDidLoad' time='0.007'/>
+    <testcase classname='MasterViewControllerTests' name='testViewwillAppear' time='0.006'/>
   </testsuite>
-  <testsuite name='NetworkTests' tests='1' failures='0'>
-    <testcase classname='NetworkTests' name='testUserAuthentication' time='2.494'/>
+  <testsuite name='NetworkTests' tests='2' failures='0'>
+    <testcase classname='NetworkTests' name='testGetEmployeeData' time='0.005'/>
+    <testcase classname='NetworkTests' name='testUserAuthentication' time='4.692'/>
   </testsuite>
   <testsuite name='ReportsViewControllerTests' tests='15' failures='5'>
-    <testcase classname='ReportsViewControllerTests' name='testDidSelectCell' time='0.027'/>
+    <testcase classname='ReportsViewControllerTests' name='testDidSelectCell' time='0.033'/>
     <testcase classname='ReportsViewControllerTests' name='testLogoutPressed' time='0.003'/>
     <testcase classname='ReportsViewControllerTests' name='testParentViewHasTableViewSubview'>
       <failure message='(([subviews containsObject:_reportsViewController.tableView]) is true) failed - View does not have a table subview'>EmployeeDirectoryTests/ReportsViewControllerTests.m:60</failure>
     </testcase>
     <testcase classname='ReportsViewControllerTests' name='testTableRowMove'>
-      <failure message='(([_reportsViewController tableView:_reportsViewController.tableView canMoveRowAtIndexPath:indexPath]) is true) failed: throwing &quot;-[ReportsViewController tableView:canMoveRowAtIndexPath:]: unrecognized selector sent to instance 0x7fb9152d34c0&quot; - Table rows can&apos;t be moved'>EmployeeDirectoryTests/ReportsViewControllerTests.m:101</failure>
+      <failure message='(([_reportsViewController tableView:_reportsViewController.tableView canMoveRowAtIndexPath:indexPath]) is true) failed: throwing &quot;-[ReportsViewController tableView:canMoveRowAtIndexPath:]: unrecognized selector sent to instance 0x7ffbe540bae0&quot; - Table rows can&apos;t be moved'>EmployeeDirectoryTests/ReportsViewControllerTests.m:101</failure>
     </testcase>
     <testcase classname='ReportsViewControllerTests' name='testTableViewCellCreateCellsWithReuseIdentifier'>
       <failure message='failed: caught &quot;NSInternalInconsistencyException&quot;, &quot;request for rect at invalid index path (&lt;NSIndexPath: 0xc000000000000016&gt; {length = 2, path = 0 - 0})&quot;'>EmployeeDirectoryTests/ReportsViewControllerTests.m:121</failure>
@@ -101,12 +103,12 @@
     <testcase classname='ReportsViewControllerTests' name='testTableViewRowEditing'>
       <failure message='(([_reportsViewController tableView:_reportsViewController.tableView canEditRowAtIndexPath:indexPath]) is true) failed - Table doesn&apos;t have editing rows'>EmployeeDirectoryTests/ReportsViewControllerTests.m:94</failure>
     </testcase>
-    <testcase classname='ReportsViewControllerTests' name='testThatTableViewHasDataSource' time='0.002'/>
+    <testcase classname='ReportsViewControllerTests' name='testThatTableViewHasDataSource' time='0.005'/>
     <testcase classname='ReportsViewControllerTests' name='testThatTableViewLoads' time='0.002'/>
     <testcase classname='ReportsViewControllerTests' name='testThatViewConformsToUITableViewDataSource' time='0.002'/>
     <testcase classname='ReportsViewControllerTests' name='testThatViewConformsToUITableViewDelegate' time='0.002'/>
     <testcase classname='ReportsViewControllerTests' name='testThatViewLoads' time='0.003'/>
-    <testcase classname='ReportsViewControllerTests' name='testViewDidLoad' time='0.003'/>
-    <testcase classname='ReportsViewControllerTests' name='testViewwillAppear' time='0.003'/>
+    <testcase classname='ReportsViewControllerTests' name='testViewDidLoad' time='0.004'/>
+    <testcase classname='ReportsViewControllerTests' name='testViewwillAppear' time='0.005'/>
   </testsuite>
 </testsuites>

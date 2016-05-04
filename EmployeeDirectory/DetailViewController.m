@@ -75,9 +75,6 @@
     NSDictionary *callCell = [NSDictionary dictionaryWithObjectsAndKeys:@"Call Cell", @"label", self.employee.cellPhone, @"data", @"call", @"command", nil];
     [self.actions addObject:callCell];
     
-    NSDictionary *sms = [NSDictionary dictionaryWithObjectsAndKeys:@"SMS", @"label", self.employee.cellPhone, @"data", @"sms", @"command", nil];
-    [self.actions addObject:sms];
-    
     NSDictionary *email = [NSDictionary dictionaryWithObjectsAndKeys:@"Email", @"label", self.employee.email, @"data", @"email", @"command", nil];
     [self.actions addObject:email];
     
@@ -155,9 +152,6 @@
         NSString *phoneStr = [[NSString alloc] initWithFormat:@"tel:%@",data];
         NSURL *phoneURL = [[NSURL alloc] initWithString:phoneStr];
         [[UIApplication sharedApplication] openURL:phoneURL];
-        
-    } else if ([command isEqualToString:@"sms"]) {
-        
     } else if ([command isEqualToString:@"email"]) {
         [[Utility sharedManager] setActionName:command label:data];
 
@@ -178,11 +172,6 @@
         reportsVC.reports = self.reports;
         [self.navigationController pushViewController:reportsVC animated:YES];
     }
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    // This will create a "invisible" footer hiding the empty Table View cells
-    return 0.01f;
 }
 
 @end
