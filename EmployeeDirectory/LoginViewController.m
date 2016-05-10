@@ -135,27 +135,45 @@
 // Saves Employee Data in Model Object 
 -(void)setUpData:(NSDictionary *)employeeData
 {
-    NSDictionary * employeeDict = [employeeData objectForKey:@"employees"];
-
-    for (NSDictionary *emp in employeeDict )
+    if(![self HasEmployeeData])
     {
-        Employee *employee = [NSEntityDescription insertNewObjectForEntityForName:@"Employee" inManagedObjectContext:[[Utility sharedManager]managedObjectContext]];
+        NSDictionary * employeeDict = [employeeData objectForKey:@"employees"];
         
-        employee.id = [NSNumber numberWithInt:[[emp valueForKey:@"id"] intValue]];
-        employee.firstName = emp[@"firstName"];
-        employee.lastName = emp[@"lastName"];
-        employee.title = emp[@"title"];
-        employee.managerId = [NSNumber numberWithInt:[[emp valueForKey:@"managerId"] intValue]];
-        employee.officePhone = emp[@"officePhone"];
-        employee.cellPhone = emp[@"cellPhone"];
-        employee.email = emp[@"email"];
-        employee.picture = emp[@"picture"];
-        NSError *error;
-        if (![[[Utility sharedManager]managedObjectContext] save:&error]) {
-            NSLog(@"Error: %@", [error localizedDescription]);
+        for (NSDictionary *emp in employeeDict )
+        {
+            Employee *employee = [NSEntityDescription insertNewObjectForEntityForName:@"Employee" inManagedObjectContext:[[Utility sharedManager]managedObjectContext]];
+            
+            employee.id = [NSNumber numberWithInt:[[emp valueForKey:@"id"] intValue]];
+            employee.firstName = emp[@"firstName"];
+            employee.lastName = emp[@"lastName"];
+            employee.title = emp[@"title"];
+            employee.managerId = [NSNumber numberWithInt:[[emp valueForKey:@"managerId"] intValue]];
+            employee.officePhone = emp[@"officePhone"];
+            employee.cellPhone = emp[@"cellPhone"];
+            employee.email = emp[@"email"];
+            employee.picture = emp[@"picture"];
+            NSError *error;
+            if (![[[Utility sharedManager]managedObjectContext] save:&error]) {
+                NSLog(@"Save Error: %@", [error localizedDescription]);
+            }
+        
         }
-    
     }
+}
+
+
+-(BOOL)HasEmployeeData
+{
+    NSManagedObjectContext *moc = [[Utility sharedManager]managedObjectContext];
+    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"Employee" inManagedObjectContext:moc];
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    [fetchRequest setEntity:entityDescription];
+    
+    NSError *error;
+    NSArray *employees = [moc executeFetchRequest:fetchRequest error:&error];
+    return [employees count] >0 ? YES: NO;
+
 }
 
 /* In a storyboard-based application, you will often want to do a little preparation before navigation

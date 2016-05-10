@@ -19,5 +19,6 @@
 -(void)showNextScreen;
 -(void)validateCredentials:(NSString*)userName password:(NSString*)pwd;
 -(void)showAlert:(NSString*)msg;
+-(BOOL)HasEmployeeData;
 
 @end
