@@ -14,7 +14,7 @@
 #import "Utility.h"
 
 @interface MasterViewController () <UISearchDisplayDelegate, UISearchBarDelegate>
-@property (strong, nonatomic) NSArray *employees;
+
 @property (strong, nonatomic) NSArray *filteredEmployees;
 @property (strong, nonatomic) NSFetchRequest *searchFetchRequest;
 @end
@@ -102,7 +102,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"Cell" ];
     
     Employee *employee = nil;
     if (tableView == self.tableView)
@@ -120,17 +120,6 @@
     return cell;
 }
 
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return NO;
-}
-
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // The table view should not be re-orderable.
-    return NO;
-}
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {

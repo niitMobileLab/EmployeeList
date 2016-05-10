@@ -78,69 +78,44 @@
     XCTAssertTrue([_detailViewController conformsToProtocol:@protocol(UITableViewDataSource) ], @"View does not conform to UITableView datasource protocol");
 }
 
-- (void)testThatTableViewHasDataSource
-{
-    XCTAssertNotNil(_detailViewController.actionList.dataSource, @"Table datasource cannot be nil");
-}
+
 
 - (void)testThatViewConformsToUITableViewDelegate
 {
     XCTAssertTrue([_detailViewController conformsToProtocol:@protocol(UITableViewDelegate) ], @"View does not conform to UITableView delegate protocol");
 }
 
-- (void)testTableViewIsConnectedToDelegate
-{
-    XCTAssertNotNil(_detailViewController.actionList.delegate, @"Table delegate cannot be nil");
-}
-
--(void)testTableViewRowEditing
-{
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    
-    XCTAssertTrue([_detailViewController tableView:_detailViewController.actionList canEditRowAtIndexPath:indexPath],@"Table doesn't have editing rows");
-}
-
--(void)testTableRowMove
-{
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    
-    XCTAssertTrue([_detailViewController tableView:_detailViewController.actionList canMoveRowAtIndexPath:indexPath],@"Table rows can't be moved");
-}
 
 
-- (void)testTableViewNumberOfRowsInSection
-{
-    NSInteger expectedRows = 12;
-    XCTAssertTrue([_detailViewController tableView:_detailViewController.actionList numberOfRowsInSection:0]==expectedRows, @"Table has %ld rows but it should have %ld", (long)[_detailViewController tableView:_detailViewController.actionList numberOfRowsInSection:0], (long)expectedRows);
-}
-
-- (void)testTableViewHeightForRowAtIndexPath
-{
-    CGFloat expectedHeight = 0.01f;
-    CGFloat actualHeight = _detailViewController.actionList.rowHeight;
-    XCTAssertEqual(expectedHeight, actualHeight, @"Cell should have %f height, but they have %f", expectedHeight, actualHeight);
-}
 
 - (void)testTableViewCellCreateCellsWithReuseIdentifier
 {
+    [_detailViewController setUpActionsData];
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    UITableViewCell *cell = [_detailViewController tableView:_detailViewController.actionList cellForRowAtIndexPath:indexPath];
-    NSString *expectedReuseIdentifier = [NSString stringWithFormat:@"%ld/%ld",(long)indexPath.section,(long)indexPath.row];
-    XCTAssertTrue([cell.reuseIdentifier isEqualToString:expectedReuseIdentifier], @"Table does not create reusable cells");
+    
+    UITableViewCell *cell = ([_detailViewController tableView:_detailViewController.actionList cellForRowAtIndexPath:indexPath]);
+    XCTAssertTrue(![cell.textLabel.text isEqualToString:@""], @"Table does not create reusable cells");
 }
 
 - (void)testNumberOfRowsInSection
 {
+    [self.detailViewController setUpActionsData];
+    NSInteger expectedRows = [self.detailViewController.actions count];
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    NSInteger numberOfRows = [_detailViewController.actionList numberOfRowsInSection:[indexPath section]];
-    XCTAssertTrue((numberOfRows>1), @"Number of rows is not assigned correctly");
+    NSInteger actualRows = [_detailViewController tableView:_detailViewController.actionList numberOfRowsInSection:[indexPath section]];
+    XCTAssertTrue((expectedRows==actualRows), @"Number of rows is not assigned correctly");
 }
 
 
+-(void)testNumberOfSections
+{
+    NSInteger noOfSection = 1;
+    NSInteger numberOfRows = [_detailViewController numberOfSectionsInTableView:_detailViewController.actionList];
+    XCTAssertNoThrow((numberOfRows==noOfSection), @"Number of section is not assigned correctly");
+}
 -(void)testDidSelectCell
 {
     [_detailViewController setUpActionsData];
-    
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     [_detailViewController tableView:_detailViewController.actionList didSelectRowAtIndexPath:indexPath];
     

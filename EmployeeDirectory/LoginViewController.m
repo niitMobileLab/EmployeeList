@@ -73,6 +73,11 @@
         {
             NSDictionary *data = [[Network sharedManager] getEmployeesData];
             [self setUpData:data];
+            
+            // Added to prevent going to next screen while unit testing this method
+            if([[[NSProcessInfo processInfo] arguments] containsObject:@"-FNTesting"])
+                return;
+            
             [self showNextScreen];
         }
         else
@@ -176,15 +181,7 @@
 
 }
 
-/* In a storyboard-based application, you will often want to do a little preparation before navigation
-// In a storyboard-based application, you will often want to do a little preparation before navigation// In a storyboard-based application, you will often want to do a little preparation before navigation// In a storyboard-based application, you will often want to do a little preparation before navigation// In a storyboard-based application, you will often want to do a little preparation before navigation// In a storyboard-based application, you will often want to do a little preparation before navigation// In a storyboard-based application, you will often want to do a little preparation before navigation// In a storyboard-based application, you will often want to do a little preparation before navigation// In a storyboard-based application, you will often want to do a little preparation before navigation
-// In a storyboard-based application, you will often want to do a little preparation before navigation// In a storyboard-based application, you will often want to do a little preparation before navigation// In a storyboard-based application, you will often want to do a little preparation before navigation// In a storyboard-based application, you will often want to do a little preparation before navigation// In a storyboard-based application, you will often want to do a little preparation before navigation// In a storyboard-based application, you will often want to do a little preparation before navigation// In a storyboard-based application, you will often want to do a little preparation before navigation
-// In a storyboard-based application, you will often want to do a little preparation before navigation// In a storyboard-based application, you will often want to do a little preparation before navigation// In a storyboard-based application, you will often want to do a little preparation before navigation
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-// In a storyboard-based application, you will often want to do a little preparation before navigation// In a storyboard-based application, you will often want to do a little preparation before navigation
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-// In a storyboard-based application, you will often want to do a little preparation before navigation// In a storyboard-based application, you will often want to do a little preparation before navigation// In a storyboard-based application, you will often want to do a little preparation before navigation// In a storyboard-based application, you will often want to do a little preparation before navigation// In a storyboard-based application, you will often want to do a little preparation before navigation// In a storyboard-based application, you will often want to do a little preparation before navigation// In a storyboard-based application, you will often want to do a little preparation before navigation// In a storyboard-based application, you will often want to do a little preparation before navigation// In a storyboard-based application, you will often want to do a little preparation before navigation// In a storyboard-based application, you will often want to do a little preparation before navigation// In a storyboard-based application, you will often want to do a little preparation before navigation// In a storyboard-based application, you will often want to do a little preparation before navigation// In a storyboard-based application, you will often want to do a little preparation before navigation// In a storyboard-based application, you will often want to do a little preparation before navigation// In a storyboard-based application, you will often want to do a little preparation before navigation// In a storyboard-based application, you will often want to do a little preparation before navigation// In a storyboard-based application, you will often want to do a little preparation before navigation// In a storyboard-based application, you will often want to do a little preparation before navigation// In a storyboard-based application, you will often want to do a little preparation before navigation// In a storyboard-based application, you will often want to do a little preparation before navigation// In a storyboard-based application, you will often want to do a little preparation before navigation// In a storyboard-based application, you will often want to do a little preparation before navigation*/
+// In a storyboard-based application, you will often want to do a little preparation before navigation*/
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.

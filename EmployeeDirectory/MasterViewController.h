@@ -13,6 +13,7 @@
 @interface MasterViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (strong, nonatomic) NSArray *employees;
 
 - (bool)searchForText:(NSString *)searchText;
 -(void)logoutPressed;
