@@ -73,6 +73,11 @@
         {
             NSDictionary *data = [[Network sharedManager] getEmployeesData];
             [self setUpData:data];
+            
+            // Added to prevent going to next screen while unit testing this method
+            if([[[NSProcessInfo processInfo] arguments] containsObject:@"-FNTesting"])
+                return;
+            
             [self showNextScreen];
         }
         else

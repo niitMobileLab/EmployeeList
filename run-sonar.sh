@@ -1,6 +1,6 @@
 #### run-sonar.sh ####
 #!/bin/bash
-## INSTALLATION: script to copy in your Xcode project in the same directory as the .xcodeproj file
+## INSTALLATION: script to copy in your Xcode pronect in the same directory as the .xcodeproj file
 ## USAGE: ./run-sonar.sh
 ## DEBUG: ./run-sonar.sh -v
 ## WARNING: edit your project parameters in sonar-project.properties rather than modifying this script
@@ -33,7 +33,7 @@ function testIsInstalled() {
 	hash $1 2>/dev/null
 	if [ $? -eq 1 ]; then
 		echo >&2 "ERROR - $1 is not installed or not in your PATH"; exit 1;
-	fi
+	fiui
 }
 
 function readParameter() {

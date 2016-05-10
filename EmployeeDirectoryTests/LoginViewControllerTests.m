@@ -35,37 +35,37 @@
 
 -(void)testUserAuthenticationSuccess
 {
-    [_loginViewController validateCredentials:@"admin" password:@"niit@12345"];
+    XCTAssertNoThrow( [_loginViewController validateCredentials:@"admin" password:@"niit@12345"]);
 }
 
 -(void)testUserAuthenticationFailed
 {
-    [_loginViewController validateCredentials:@"admin" password:@"niit@123"];
+    XCTAssertNoThrow([_loginViewController validateCredentials:@"admin" password:@"niit@123"]);
 }
 
 -(void)testEmptyUserAuthentication
 {
-    [[Utility sharedManager] checkUser:@"" password:@""];
+    XCTAssertNoThrow([[Utility sharedManager] checkUser:@"" password:@""]);
 }
 
 -(void)testValidateOnlineUser
 {
-    [[Network sharedManager] validateOnline:@"" password:@""];
+    XCTAssertNoThrow([[Network sharedManager] validateOnline:@"" password:@""]);
 }
 
 
 -(void)testSignIn
 {
-    [_loginViewController signInPressed:nil];
+    XCTAssertNoThrow([_loginViewController signInPressed:nil]);
 }
 
 -(void)testAlertMsg
 {
-    [_loginViewController showAlert:@"Kindly enter Valid Credentials"];
+    XCTAssertNoThrow([_loginViewController showAlert:@"Kindly enter Valid Credentials"]);
 }
 
 -(void)testViewWillDisappear
 {
-    [_loginViewController viewWillDisappear:YES];
+    XCTAssertNoThrow([_loginViewController viewWillDisappear:YES]);
 }
 @end

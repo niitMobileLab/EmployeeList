@@ -13,7 +13,7 @@
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (strong, nonatomic) Employee *employee;
-
+@property (strong, nonatomic) NSMutableArray *actions;
 @property (weak, nonatomic) IBOutlet UIView *listContainer;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;

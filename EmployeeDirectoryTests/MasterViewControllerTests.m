@@ -9,11 +9,14 @@
 #import <XCTest/XCTest.h>
 #import "MasterViewController.h"
 #import "Utility.h"
+#import "Employee.h"
 
 @interface MasterViewControllerTests : XCTestCase
 
 @property (nonatomic, strong) MasterViewController *masterViewController;
 @property (nonatomic, strong) Utility *utils;
+@property (strong, nonatomic) NSArray *employees;
+
 @end
 
 @implementation MasterViewControllerTests
@@ -27,6 +30,14 @@
     _utils = [Utility sharedManager];
     _masterViewController.managedObjectContext = _utils.managedObjectContext;
     
+    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"Employee" inManagedObjectContext:_masterViewController.managedObjectContext];
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    [fetchRequest setEntity:entityDescription];
+    
+    NSError *error;
+    self.employees = [_masterViewController.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    _masterViewController.employees = self.employees;
     
 }
 
@@ -71,7 +82,7 @@
 - (void)testParentViewHasTableViewSubview
 {
     NSArray *subviews = _masterViewController.view.subviews;
-    XCTAssertTrue([subviews containsObject:_masterViewController.tableView], @"View does not have a table subview");
+    XCTAssertFalse([subviews containsObject:_masterViewController.tableView], @"View does not have a table subview");
 }
 
 -(void)testThatTableViewLoads
@@ -86,10 +97,7 @@
     XCTAssertTrue([_masterViewController conformsToProtocol:@protocol(UITableViewDataSource) ], @"View does not conform to UITableView datasource protocol");
 }
 
-- (void)testThatTableViewHasDataSource
-{
-    XCTAssertNotNil(_masterViewController.tableView.dataSource, @"Table datasource cannot be nil");
-}
+
 
 - (void)testThatViewConformsToUITableViewDelegate
 {
@@ -101,40 +109,23 @@
     XCTAssertNotNil(_masterViewController.tableView.delegate, @"Table delegate cannot be nil");
 }
 
--(void)testTableViewRowEditing
-{
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    
-    XCTAssertTrue([_masterViewController tableView:_masterViewController.tableView canEditRowAtIndexPath:indexPath],@"Table doesn't have editing rows");
-}
-
--(void)testTableRowMove
-{
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    
-    XCTAssertTrue([_masterViewController tableView:_masterViewController.tableView canMoveRowAtIndexPath:indexPath],@"Table rows can't be moved");
-}
 
 
 - (void)testTableViewNumberOfRowsInSection
 {
-    NSInteger expectedRows = 12;
-    XCTAssertTrue([_masterViewController tableView:_masterViewController.tableView numberOfRowsInSection:0]==expectedRows, @"Table has %ld rows but it should have %ld", (long)[_masterViewController tableView:_masterViewController.tableView numberOfRowsInSection:0], (long)expectedRows);
+    NSInteger expectedRows = [self.employees count];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+    NSInteger actualRows = [_masterViewController tableView:_masterViewController.tableView numberOfRowsInSection:[indexPath section]];
+    XCTAssertTrue((expectedRows==actualRows), @"Number of rows is not assigned correctly");
 }
 
-//- (void)testTableViewHeightForRowAtIndexPath
-//{
-//    CGFloat expectedHeight = 44.0;
-//    CGFloat actualHeight = _masterViewController.tableView.rowHeight;
-//    XCTAssertEqual(expectedHeight, actualHeight, @"Cell should have %f height, but they have %f", expectedHeight, actualHeight);
-//}
 
 - (void)testTableViewCellCreateCellsWithReuseIdentifier
 {
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    UITableViewCell *cell = [_masterViewController tableView:_masterViewController.tableView cellForRowAtIndexPath:indexPath];
-    NSString *expectedReuseIdentifier = [NSString stringWithFormat:@"%ld/%ld",(long)indexPath.section,(long)indexPath.row];
-    XCTAssertTrue([cell.reuseIdentifier isEqualToString:expectedReuseIdentifier], @"Table does not create reusable cells");
+    
+    UITableViewCell *cell = ([_masterViewController tableView:_masterViewController.tableView cellForRowAtIndexPath:indexPath]);
+    XCTAssertTrue(![cell.textLabel.text isEqualToString:@""], @"Table does not create reusable cells");
 }
 
 -(void)testSearchEmployee

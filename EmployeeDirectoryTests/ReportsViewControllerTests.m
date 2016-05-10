@@ -8,11 +8,15 @@
 
 #import <XCTest/XCTest.h>
 #import "ReportsViewController.h"
+#import "Utility.h"
+#import "Employee.h"
+
 
 @interface ReportsViewControllerTests : XCTestCase
 
 @property (nonatomic, strong) ReportsViewController *reportsViewController;
-
+@property (nonatomic, strong) NSArray *reports;
+@property (nonatomic, strong) Utility *utils;
 @end
 
 @implementation ReportsViewControllerTests
@@ -21,6 +25,23 @@
     [super setUp];
     _reportsViewController= [[UIStoryboard storyboardWithName:@"Main" bundle:nil]instantiateViewControllerWithIdentifier:@"ReportsVC"];
     [_reportsViewController performSelectorOnMainThread:@selector(loadView) withObject:nil waitUntilDone:YES];
+    
+    _utils = [Utility sharedManager];
+    _reportsViewController.managedObjectContext = _utils.managedObjectContext;
+    
+    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"Employee" inManagedObjectContext:_reportsViewController.managedObjectContext];
+    
+    // Find the direct reports
+    NSFetchRequest *reportsRequest = [[NSFetchRequest alloc] init];
+    [reportsRequest setEntity:entityDescription];
+    
+    NSPredicate *reportsPredicate = [NSPredicate predicateWithFormat:@"managerId == %@", [NSNumber numberWithInt:1]];
+    [reportsRequest setPredicate:reportsPredicate];
+    
+    NSError *error;
+    self.reports = [_reportsViewController.managedObjectContext executeFetchRequest:reportsRequest error:&error];
+    _reportsViewController.reports = self.reports;
+    
 }
 
 - (void)tearDown {
@@ -49,16 +70,6 @@
 }
 
 #pragma mark - View loading tests
--(void)testThatViewLoads
-{
-    XCTAssertNotNil(_reportsViewController.view, @"View not initiated properly");
-}
-
-- (void)testParentViewHasTableViewSubview
-{
-    NSArray *subviews = _reportsViewController.view.subviews;
-    XCTAssertTrue([subviews containsObject:_reportsViewController.tableView], @"View does not have a table subview");
-}
 
 -(void)testThatTableViewLoads
 {
@@ -72,55 +83,31 @@
     XCTAssertTrue([_reportsViewController conformsToProtocol:@protocol(UITableViewDataSource) ], @"View does not conform to UITableView datasource protocol");
 }
 
-- (void)testThatTableViewHasDataSource
-{
-    XCTAssertNotNil(_reportsViewController.tableView.dataSource, @"Table datasource cannot be nil");
-}
+
 
 - (void)testThatViewConformsToUITableViewDelegate
 {
     XCTAssertTrue([_reportsViewController conformsToProtocol:@protocol(UITableViewDelegate) ], @"View does not conform to UITableView delegate protocol");
 }
 
-- (void)testTableViewIsConnectedToDelegate
-{
-    XCTAssertNotNil(_reportsViewController.tableView.delegate, @"Table delegate cannot be nil");
-}
-
--(void)testTableViewRowEditing
-{
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    
-    XCTAssertTrue([_reportsViewController tableView:_reportsViewController.tableView canEditRowAtIndexPath:indexPath],@"Table doesn't have editing rows");
-}
-
--(void)testTableRowMove
-{
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    
-    XCTAssertTrue([_reportsViewController tableView:_reportsViewController.tableView canMoveRowAtIndexPath:indexPath],@"Table rows can't be moved");
-}
 
 
 - (void)testTableViewNumberOfRowsInSection
 {
-    NSInteger expectedRows = 12;
-    XCTAssertTrue([_reportsViewController tableView:_reportsViewController.tableView numberOfRowsInSection:0]==expectedRows, @"Table has %ld rows but it should have %ld", (long)[_reportsViewController tableView:_reportsViewController.tableView numberOfRowsInSection:0], (long)expectedRows);
+    NSInteger expectedRows = [self.reports count];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+    NSInteger actualRows = [_reportsViewController tableView:_reportsViewController.tableView numberOfRowsInSection:[indexPath section]];
+    XCTAssertTrue((expectedRows==actualRows), @"Number of rows is not assigned correctly");
+    
 }
 
-//- (void)testTableViewHeightForRowAtIndexPath
-//{
-//    CGFloat expectedHeight = 44.0;
-//    CGFloat actualHeight = _masterViewController.tableView.rowHeight;
-//    XCTAssertEqual(expectedHeight, actualHeight, @"Cell should have %f height, but they have %f", expectedHeight, actualHeight);
-//}
 
 - (void)testTableViewCellCreateCellsWithReuseIdentifier
 {
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    UITableViewCell *cell = [_reportsViewController tableView:_reportsViewController.tableView cellForRowAtIndexPath:indexPath];
-    NSString *expectedReuseIdentifier = [NSString stringWithFormat:@"%ld/%ld",(long)indexPath.section,(long)indexPath.row];
-    XCTAssertTrue([cell.reuseIdentifier isEqualToString:expectedReuseIdentifier], @"Table does not create reusable cells");
+    
+    UITableViewCell *cell = ([_reportsViewController tableView:_reportsViewController.tableView cellForRowAtIndexPath:indexPath]);
+    XCTAssertTrue(![cell.textLabel.text isEqualToString:@""], @"Table does not create reusable cells");
 }
 
 -(void)testDidSelectCell

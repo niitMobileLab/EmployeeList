@@ -48,7 +48,6 @@
 		D97F878B183A77E700A1390E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D97F8765183A77E700A1390E /* UIKit.framework */; };
 		D97F878C183A77E700A1390E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D97F8767183A77E700A1390E /* CoreData.framework */; };
 		D97F8794183A77E700A1390E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D97F8792183A77E700A1390E /* InfoPlist.strings */; };
-		D97F8796183A77E700A1390E /* EmployeeDirectoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D97F8795183A77E700A1390E /* EmployeeDirectoryTests.m */; };
 		D97F87A1183A78D200A1390E /* Employee.m in Sources */ = {isa = PBXBuildFile; fileRef = D97F87A0183A78D200A1390E /* Employee.m */; };
 		D97F87A4183A79ED00A1390E /* ReportsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D97F87A3183A79ED00A1390E /* ReportsViewController.m */; };
 		D97F87B2183A7B7700A1390E /* amy_jones.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D97F87A6183A7B7700A1390E /* amy_jones.jpg */; };
@@ -126,7 +125,6 @@
 		D97F8788183A77E700A1390E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		D97F8791183A77E700A1390E /* EmployeeDirectoryTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EmployeeDirectoryTests-Info.plist"; sourceTree = "<group>"; };
 		D97F8793183A77E700A1390E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		D97F8795183A77E700A1390E /* EmployeeDirectoryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmployeeDirectoryTests.m; sourceTree = "<group>"; };
 		D97F879F183A78D200A1390E /* Employee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Employee.h; sourceTree = "<group>"; };
 		D97F87A0183A78D200A1390E /* Employee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Employee.m; sourceTree = "<group>"; };
 		D97F87A2183A79ED00A1390E /* ReportsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportsViewController.h; sourceTree = "<group>"; };
@@ -309,7 +307,6 @@
 				010486AA1CD36CB600E8B18B /* MasterViewControllerTests.m */,
 				010486A81CD36CAF00E8B18B /* ReportsViewControllerTests.m */,
 				010486A61CD36CA600E8B18B /* DetailViewControllerTests.m */,
-				D97F8795183A77E700A1390E /* EmployeeDirectoryTests.m */,
 				010486AE1CD379FB00E8B18B /* NetworkTests.m */,
 				D97F8790183A77E700A1390E /* Supporting Files */,
 				011E3C8E1CD322E800BE3E5B /* TestPrefixHeader.pch */,
@@ -551,7 +548,6 @@
 			files = (
 				010486AF1CD379FB00E8B18B /* NetworkTests.m in Sources */,
 				010486AB1CD36CB600E8B18B /* MasterViewControllerTests.m in Sources */,
-				D97F8796183A77E700A1390E /* EmployeeDirectoryTests.m in Sources */,
 				010486AD1CD36CBF00E8B18B /* LoginViewControllerTests.m in Sources */,
 				010486A91CD36CAF00E8B18B /* ReportsViewControllerTests.m in Sources */,
 				010486A71CD36CA600E8B18B /* DetailViewControllerTests.m in Sources */,
@@ -729,7 +725,10 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = EmployeeDirectoryTests/TestPrefixHeader.pch;
-				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"TEST=1",
+				);
 				INFOPLIST_FILE = "EmployeeDirectoryTests/EmployeeDirectoryTests-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.coenraets.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";

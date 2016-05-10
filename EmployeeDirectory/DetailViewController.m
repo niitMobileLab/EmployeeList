@@ -13,7 +13,7 @@
 #import "Utility.h"
 
 @interface DetailViewController ()
-@property NSMutableArray *actions;
+
 @property (strong, nonatomic) Employee *manager;
 @property (strong, nonatomic) NSArray *reports;
 @end
@@ -66,7 +66,8 @@
 }
 
 -(void)setUpActionsData
-{
+{    
+    
     self.actions = [[NSMutableArray alloc] init];
     
     NSDictionary *callOffice = [NSDictionary dictionaryWithObjectsAndKeys:@"Call Office", @"label", self.employee.officePhone, @"data", @"call", @"command", nil];
@@ -127,7 +128,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     // Configure the cell...
     
