@@ -33,7 +33,7 @@ function testIsInstalled() {
 	hash $1 2>/dev/null
 	if [ $? -eq 1 ]; then
 		echo >&2 "ERROR - $1 is not installed or not in your PATH"; exit 1;
-	fiui
+	fi
 }
 
 function readParameter() {
@@ -417,7 +417,7 @@ fi
 if [ "$lizard" = "on" ]; then
 	if hash $LIZARD_CMD 2>/dev/null; then
 		echo -n 'Running Lizard...'
-  		$LIZARD_CMD --xml "$srcDirs" > sonar-reports/lizard-report.xml
+  		$LIZARD_CMD --xml "$srcDirs" > sonar-reports//lizard-report.xml
   	else
   		echo 'Skipping Lizard (not installed!)'
   	fi

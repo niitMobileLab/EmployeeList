@@ -26,6 +26,88 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
+    int a = 10;
+    do
+    {
+        NSLog(@"value of a: %d\n", a);
+        a = a + 1;
+    }while( a < 20 );
+    
+    char grade = 'B';
+    
+    switch(grade)
+    {
+        case 'A' :
+            NSLog(@"Excellent!\n" );
+            break;
+        case 'B' :
+        case 'C' :
+            NSLog(@"Well done\n" );
+            break;
+        case 'D' :
+            NSLog(@"You passed\n" );
+            break;
+        case 'F' :
+            NSLog(@"Better try again\n" );
+            break;
+        default :
+            NSLog(@"Invalid grade\n" );
+    }
+    NSLog(@"Your grade is  %c\n", grade );
+    
+    int num1 = 3;
+    int num2 = 4;
+    int num3 = 1;
+    int num4 = 5;
+    
+    if(num1==3)
+    {
+        if(num2>num3)
+        {
+            if(num1>num3)
+            {
+                if(num3>num4)
+                {
+                    if(num4>num1)
+                    {
+                        num4 = num1;
+                    }else {
+                        num2 = num4;
+                    }
+                    
+                }else {
+                    num2= num3;
+                }
+            }else {
+                num1 = num2;
+            }
+        }
+        else
+        {
+            num2 = num3;
+        }
+        
+    }
+    
+    int num44 = 3;
+    int num5 = 4;
+    int num6 = 1;
+    
+    
+    if(num44==3)
+    {
+        if(num5>num6)
+        {
+            num44 = num5;
+        }
+        else
+        {
+            num5 = num6;
+        }
+    }
+
+    
     id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
     
     [[Utility sharedManager] setScreenName:@"Employee List Screen"];
@@ -46,6 +128,7 @@
     
     self.navigationItem.hidesBackButton = YES;
     [self logUser];
+    
 
 }
 
@@ -71,7 +154,8 @@
     UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithCustomView:button];
     self.navigationItem.rightBarButtonItem = barButton;
 
-    NSManagedObjectContext *moc = [self managedObjectContext];
+    NSManagedObjectContext *moc = [[Utility sharedManager]managedObjectContext];
+    _managedObjectContext = moc;
     NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"Employee" inManagedObjectContext:moc];
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
@@ -79,6 +163,57 @@
     
     NSError *error;
     self.employees = [_managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    
+    int num1 = 3;
+    int num2 = 4;
+    int num3 = 1;
+    int num4 = 5;
+    
+    if(num1==3)
+    {
+        if(num2>num3)
+        {
+            if(num1>num3)
+            {
+                if(num3>num4)
+                {
+                    if(num4>num1)
+                    {
+                        num4 = num1;
+                    }else {
+                        num2 = num4;
+                    }
+                    
+                }else {
+                num2= num3;
+                }
+            }else {
+            num1 = num2;
+            }
+        }
+        else
+        {
+            num2 = num3;
+        }
+        
+    }
+    
+    int num44 = 3;
+    int num5 = 4;
+    int num6 = 1;
+    
+    
+    if(num44==3)
+    {
+        if(num5>num6)
+        {
+            num44 = num5;
+        }
+        else
+        {
+            num5 = num6;
+        }
+    }
     
 }
 
@@ -92,13 +227,66 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    int num1 = 3;
+    int num2 = 4;
+    int num3 = 1;
+    int num4 = 5;
+    
+    if(num1==3)
+    {
+        if(num2>num3)
+        {
+            if(num1>num3)
+            {
+                if(num3>num4)
+                {
+                    if(num4>num1)
+                    {
+                        num4 = num1;
+                    }else {
+                        num2 = num4;
+                    }
+                    
+                }else {
+                    num2= num3;
+                }
+            }else {
+                num1 = num2;
+            }
+        }
+        else
+        {
+            num2 = num3;
+        }
+        
+    }
+    
+    int num44 = 3;
+    int num5 = 4;
+    int num6 = 1;
+    
+    
+    if(num44==3)
+    {
+        if(num5>num6)
+        {
+            num44 = num5;
+        }
+        else
+        {
+            num5 = num6;
+        }
+    }
+    
+
+    
     if (tableView == self.tableView)
     {
         return [self.employees count];
     } else {
         return [self.filteredEmployees count];
     }
-}
+    }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -143,7 +331,7 @@
     detailVC.employee = employee;
 }
 
-- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
+- (BOOL)searchDisplayController:(UISearchController*)controller shouldReloadTableForSearchString:(NSString *)searchString
 {
     [self searchForText:searchString];
     return YES;
@@ -188,5 +376,7 @@
     
     return _searchFetchRequest;
 }
+
+
 
 @end

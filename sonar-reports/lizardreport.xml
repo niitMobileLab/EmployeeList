@@ -1,0 +1,820 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type="text/xsl" href="https://raw.github.com/terryyin/lizard/master/lizard.xsl"?>
+<cppncss>
+	<measure type="Function">
+		<labels>
+			<label>Nr.</label>
+			<label>NCSS</label>
+			<label>CCN</label>
+		</labels>
+		<item name="NS_ENUM(...) at EmployeeDirectory/Bolts.framework/Headers/BFAppLinkNavigation.h:18">
+			<value>1</value>
+			<value>5</value>
+			<value>1</value>
+		</item>
+		<average label="NCSS" value="5"/>
+		<average label="CCN" value="1"/>
+		<average label="NCSS" value="5"/>
+		<average label="CCN" value="1"/>
+		<average label="NCSS" value="5"/>
+		<average label="CCN" value="1"/>
+		<item name="NS_ENUM(...) at EmployeeDirectory/Bolts.framework/Headers/BFAppLinkReturnToRefererView.h:19">
+			<value>2</value>
+			<value>5</value>
+			<value>1</value>
+		</item>
+		<average label="NCSS" value="5"/>
+		<average label="CCN" value="1"/>
+		<average label="NCSS" value="5"/>
+		<average label="CCN" value="1"/>
+		<average label="NCSS" value="5"/>
+		<average label="CCN" value="1"/>
+		<average label="NCSS" value="5"/>
+		<average label="CCN" value="1"/>
+		<average label="NCSS" value="5"/>
+		<average label="CCN" value="1"/>
+		<average label="NCSS" value="5"/>
+		<average label="CCN" value="1"/>
+		<average label="NCSS" value="5"/>
+		<average label="CCN" value="1"/>
+		<average label="NCSS" value="5"/>
+		<average label="CCN" value="1"/>
+		<average label="NCSS" value="5"/>
+		<average label="CCN" value="1"/>
+		<average label="NCSS" value="5"/>
+		<average label="CCN" value="1"/>
+		<average label="NCSS" value="5"/>
+		<average label="CCN" value="1"/>
+		<average label="NCSS" value="5"/>
+		<average label="CCN" value="1"/>
+		<average label="NCSS" value="5"/>
+		<average label="CCN" value="1"/>
+		<average label="NCSS" value="5"/>
+		<average label="CCN" value="1"/>
+		<average label="NCSS" value="5"/>
+		<average label="CCN" value="1"/>
+		<average label="NCSS" value="5"/>
+		<average label="CCN" value="1"/>
+		<average label="NCSS" value="5"/>
+		<average label="CCN" value="1"/>
+		<average label="NCSS" value="5"/>
+		<average label="CCN" value="1"/>
+		<average label="NCSS" value="5"/>
+		<average label="CCN" value="1"/>
+		<average label="NCSS" value="5"/>
+		<average label="CCN" value="1"/>
+		<average label="NCSS" value="5"/>
+		<average label="CCN" value="1"/>
+		<average label="NCSS" value="5"/>
+		<average label="CCN" value="1"/>
+		<average label="NCSS" value="5"/>
+		<average label="CCN" value="1"/>
+		<average label="NCSS" value="5"/>
+		<average label="CCN" value="1"/>
+		<average label="NCSS" value="5"/>
+		<average label="CCN" value="1"/>
+		<item name="NS_ENUM(...) at EmployeeDirectory/Parse.framework/Headers/PFConstants.h:39">
+			<value>3</value>
+			<value>8</value>
+			<value>1</value>
+		</item>
+		<item name="NS_ENUM(...) at EmployeeDirectory/Parse.framework/Headers/PFConstants.h:82">
+			<value>4</value>
+			<value>7</value>
+			<value>1</value>
+		</item>
+		<item name="NS_ENUM(...) at EmployeeDirectory/Parse.framework/Headers/PFConstants.h:128">
+			<value>5</value>
+			<value>57</value>
+			<value>1</value>
+		</item>
+		<average label="NCSS" value="16"/>
+		<average label="CCN" value="1"/>
+		<average label="NCSS" value="16"/>
+		<average label="CCN" value="1"/>
+		<average label="NCSS" value="16"/>
+		<average label="CCN" value="1"/>
+		<average label="NCSS" value="16"/>
+		<average label="CCN" value="1"/>
+		<average label="NCSS" value="16"/>
+		<average label="CCN" value="1"/>
+		<average label="NCSS" value="16"/>
+		<average label="CCN" value="1"/>
+		<average label="NCSS" value="16"/>
+		<average label="CCN" value="1"/>
+		<average label="NCSS" value="16"/>
+		<average label="CCN" value="1"/>
+		<average label="NCSS" value="16"/>
+		<average label="CCN" value="1"/>
+		<average label="NCSS" value="16"/>
+		<average label="CCN" value="1"/>
+		<average label="NCSS" value="16"/>
+		<average label="CCN" value="1"/>
+		<average label="NCSS" value="16"/>
+		<average label="CCN" value="1"/>
+		<average label="NCSS" value="16"/>
+		<average label="CCN" value="1"/>
+		<average label="NCSS" value="16"/>
+		<average label="CCN" value="1"/>
+		<average label="NCSS" value="16"/>
+		<average label="CCN" value="1"/>
+		<average label="NCSS" value="16"/>
+		<average label="CCN" value="1"/>
+		<average label="NCSS" value="16"/>
+		<average label="CCN" value="1"/>
+		<average label="NCSS" value="16"/>
+		<average label="CCN" value="1"/>
+		<average label="NCSS" value="16"/>
+		<average label="CCN" value="1"/>
+		<average label="NCSS" value="16"/>
+		<average label="CCN" value="1"/>
+		<average label="NCSS" value="16"/>
+		<average label="CCN" value="1"/>
+		<average label="NCSS" value="16"/>
+		<average label="CCN" value="1"/>
+		<average label="NCSS" value="16"/>
+		<average label="CCN" value="1"/>
+		<average label="NCSS" value="16"/>
+		<average label="CCN" value="1"/>
+		<average label="NCSS" value="16"/>
+		<average label="CCN" value="1"/>
+		<average label="NCSS" value="16"/>
+		<average label="CCN" value="1"/>
+		<average label="NCSS" value="16"/>
+		<average label="CCN" value="1"/>
+		<average label="NCSS" value="16"/>
+		<average label="CCN" value="1"/>
+		<item name="application: didFinishLaunchingWithOptions:(...) at EmployeeDirectory/AppDelegate.m:20">
+			<value>6</value>
+			<value>46</value>
+			<value>7</value>
+		</item>
+		<item name="setUpData:(...) at EmployeeDirectory/AppDelegate.m:84">
+			<value>7</value>
+			<value>24</value>
+			<value>4</value>
+		</item>
+		<item name="HasEmployeeData(...) at EmployeeDirectory/AppDelegate.m:117">
+			<value>8</value>
+			<value>10</value>
+			<value>2</value>
+		</item>
+		<average label="NCSS" value="20"/>
+		<average label="CCN" value="2"/>
+		<average label="NCSS" value="20"/>
+		<average label="CCN" value="2"/>
+		<item name="configureView(...) at EmployeeDirectory/DetailViewController.m:25">
+			<value>9</value>
+			<value>29</value>
+			<value>4</value>
+		</item>
+		<item name="setUpActionsData(...) at EmployeeDirectory/DetailViewController.m:68">
+			<value>10</value>
+			<value>18</value>
+			<value>3</value>
+		</item>
+		<item name="viewDidLoad(...) at EmployeeDirectory/DetailViewController.m:94">
+			<value>11</value>
+			<value>81</value>
+			<value>14</value>
+		</item>
+		<item name="logoutPressed(...) at EmployeeDirectory/DetailViewController.m:194">
+			<value>12</value>
+			<value>4</value>
+			<value>1</value>
+		</item>
+		<item name="numberOfSectionsInTableView:(...) at EmployeeDirectory/DetailViewController.m:202">
+			<value>13</value>
+			<value>3</value>
+			<value>1</value>
+		</item>
+		<item name="tableView: numberOfRowsInSection:(...) at EmployeeDirectory/DetailViewController.m:207">
+			<value>14</value>
+			<value>3</value>
+			<value>1</value>
+		</item>
+		<item name="tableView: cellForRowAtIndexPath:(...) at EmployeeDirectory/DetailViewController.m:212">
+			<value>15</value>
+			<value>9</value>
+			<value>1</value>
+		</item>
+		<item name="tableView: didSelectRowAtIndexPath:(...) at EmployeeDirectory/DetailViewController.m:227">
+			<value>16</value>
+			<value>30</value>
+			<value>5</value>
+		</item>
+		<average label="NCSS" value="21"/>
+		<average label="CCN" value="3"/>
+		<average label="NCSS" value="21"/>
+		<average label="CCN" value="3"/>
+		<average label="NCSS" value="21"/>
+		<average label="CCN" value="3"/>
+		<item name="main(...) at EmployeeDirectory/main.m:13">
+			<value>17</value>
+			<value>6</value>
+			<value>1</value>
+		</item>
+		<average label="NCSS" value="20"/>
+		<average label="CCN" value="2"/>
+		<average label="NCSS" value="20"/>
+		<average label="CCN" value="2"/>
+		<item name="viewWillAppear:(...) at EmployeeDirectory/MasterViewController.m:26">
+			<value>18</value>
+			<value>80</value>
+			<value>14</value>
+		</item>
+		<item name="logoutPressed(...) at EmployeeDirectory/MasterViewController.m:135">
+			<value>19</value>
+			<value>4</value>
+			<value>1</value>
+		</item>
+		<item name="logUser(...) at EmployeeDirectory/MasterViewController.m:140">
+			<value>20</value>
+			<value>3</value>
+			<value>1</value>
+		</item>
+		<item name="viewDidLoad(...) at EmployeeDirectory/MasterViewController.m:146">
+			<value>21</value>
+			<value>61</value>
+			<value>8</value>
+		</item>
+		<item name="numberOfSectionsInTableView:(...) at EmployeeDirectory/MasterViewController.m:223">
+			<value>22</value>
+			<value>4</value>
+			<value>1</value>
+		</item>
+		<item name="tableView: numberOfRowsInSection:(...) at EmployeeDirectory/MasterViewController.m:228">
+			<value>23</value>
+			<value>53</value>
+			<value>9</value>
+		</item>
+		<item name="tableView: cellForRowAtIndexPath:(...) at EmployeeDirectory/MasterViewController.m:291">
+			<value>24</value>
+			<value>16</value>
+			<value>2</value>
+		</item>
+		<item name="prepareForSegue: sender:(...) at EmployeeDirectory/MasterViewController.m:312">
+			<value>25</value>
+			<value>17</value>
+			<value>2</value>
+		</item>
+		<item name="searchDisplayController: shouldReloadTableForSearchString:(...) at EmployeeDirectory/MasterViewController.m:334">
+			<value>26</value>
+			<value>5</value>
+			<value>1</value>
+		</item>
+		<item name="searchForText:(...) at EmployeeDirectory/MasterViewController.m:340">
+			<value>27</value>
+			<value>18</value>
+			<value>3</value>
+		</item>
+		<item name="searchFetchRequest(...) at EmployeeDirectory/MasterViewController.m:362">
+			<value>28</value>
+			<value>14</value>
+			<value>2</value>
+		</item>
+		<average label="NCSS" value="22"/>
+		<average label="CCN" value="3"/>
+		<average label="NCSS" value="22"/>
+		<average label="CCN" value="3"/>
+		<average label="NCSS" value="22"/>
+		<average label="CCN" value="3"/>
+		<item name="sharedManager(...) at EmployeeDirectory/Network.m:15">
+			<value>29</value>
+			<value>52</value>
+			<value>8</value>
+		</item>
+		<item name="getEmployeesData(...) at EmployeeDirectory/Network.m:82">
+			<value>30</value>
+			<value>18</value>
+			<value>2</value>
+		</item>
+		<average label="NCSS" value="23"/>
+		<average label="CCN" value="3"/>
+		<average label="NCSS" value="23"/>
+		<average label="CCN" value="3"/>
+		<item name="viewDidLoad(...) at EmployeeDirectory/ReportsViewController.m:20">
+			<value>31</value>
+			<value>37</value>
+			<value>7</value>
+		</item>
+		<item name="logoutPressed(...) at EmployeeDirectory/ReportsViewController.m:77">
+			<value>32</value>
+			<value>4</value>
+			<value>1</value>
+		</item>
+		<item name="numberOfSectionsInTableView:(...) at EmployeeDirectory/ReportsViewController.m:85">
+			<value>33</value>
+			<value>4</value>
+			<value>1</value>
+		</item>
+		<item name="tableView: numberOfRowsInSection:(...) at EmployeeDirectory/ReportsViewController.m:90">
+			<value>34</value>
+			<value>4</value>
+			<value>1</value>
+		</item>
+		<item name="tableView: cellForRowAtIndexPath:(...) at EmployeeDirectory/ReportsViewController.m:95">
+			<value>35</value>
+			<value>8</value>
+			<value>1</value>
+		</item>
+		<item name="tableView: didSelectRowAtIndexPath:(...) at EmployeeDirectory/ReportsViewController.m:108">
+			<value>36</value>
+			<value>9</value>
+			<value>1</value>
+		</item>
+		<average label="NCSS" value="21"/>
+		<average label="CCN" value="3"/>
+		<average label="NCSS" value="21"/>
+		<average label="CCN" value="3"/>
+		<item name="sharedManager(...) at EmployeeDirectory/Utility.m:18">
+			<value>37</value>
+			<value>8</value>
+			<value>1</value>
+		</item>
+		<item name="managedObjectContext(...) at EmployeeDirectory/Utility.m:34">
+			<value>38</value>
+			<value>12</value>
+			<value>3</value>
+		</item>
+		<item name="managedObjectModel(...) at EmployeeDirectory/Utility.m:50">
+			<value>39</value>
+			<value>9</value>
+			<value>2</value>
+		</item>
+		<item name="persistentStoreCoordinator(...) at EmployeeDirectory/Utility.m:62">
+			<value>40</value>
+			<value>14</value>
+			<value>3</value>
+		</item>
+		<item name="applicationDocumentsDirectory(...) at EmployeeDirectory/Utility.m:82">
+			<value>41</value>
+			<value>4</value>
+			<value>1</value>
+		</item>
+		<item name="setScreenName:(...) at EmployeeDirectory/Utility.m:89">
+			<value>42</value>
+			<value>5</value>
+			<value>1</value>
+		</item>
+		<item name="setActionName: label:(...) at EmployeeDirectory/Utility.m:96">
+			<value>43</value>
+			<value>8</value>
+			<value>1</value>
+		</item>
+		<item name="arrayOutOfBoundsException(...) at EmployeeDirectory/Utility.m:106">
+			<value>44</value>
+			<value>5</value>
+			<value>1</value>
+		</item>
+		<average label="NCSS" value="18"/>
+		<average label="CCN" value="2"/>
+	</measure>
+	<measure type="File">
+		<labels>
+			<label>Nr.</label>
+			<label>NCSS</label>
+			<label>CCN</label>
+			<label>Functions</label>
+		</labels>
+		<item name="EmployeeDirectory/Bolts.framework/Headers/BFAppLink.h">
+			<value>1</value>
+			<value>9</value>
+			<value>0</value>
+			<value>0</value>
+		</item>
+		<item name="EmployeeDirectory/Bolts.framework/Headers/BFAppLinkNavigation.h">
+			<value>2</value>
+			<value>23</value>
+			<value>1</value>
+			<value>1</value>
+		</item>
+		<item name="EmployeeDirectory/Bolts.framework/Headers/BFAppLinkResolving.h">
+			<value>3</value>
+			<value>4</value>
+			<value>0</value>
+			<value>0</value>
+		</item>
+		<item name="EmployeeDirectory/Bolts.framework/Headers/BFAppLinkReturnToRefererController.h">
+			<value>4</value>
+			<value>20</value>
+			<value>0</value>
+			<value>0</value>
+		</item>
+		<item name="EmployeeDirectory/Bolts.framework/Headers/BFAppLinkReturnToRefererView.h">
+			<value>5</value>
+			<value>19</value>
+			<value>1</value>
+			<value>1</value>
+		</item>
+		<item name="EmployeeDirectory/Bolts.framework/Headers/BFAppLinkTarget.h">
+			<value>6</value>
+			<value>8</value>
+			<value>0</value>
+			<value>0</value>
+		</item>
+		<item name="EmployeeDirectory/Bolts.framework/Headers/BFCancellationToken.h">
+			<value>7</value>
+			<value>7</value>
+			<value>0</value>
+			<value>0</value>
+		</item>
+		<item name="EmployeeDirectory/Bolts.framework/Headers/BFCancellationTokenRegistration.h">
+			<value>8</value>
+			<value>5</value>
+			<value>0</value>
+			<value>0</value>
+		</item>
+		<item name="EmployeeDirectory/Bolts.framework/Headers/BFCancellationTokenSource.h">
+			<value>9</value>
+			<value>11</value>
+			<value>0</value>
+			<value>0</value>
+		</item>
+		<item name="EmployeeDirectory/Bolts.framework/Headers/BFDefines.h">
+			<value>10</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+		</item>
+		<item name="EmployeeDirectory/Bolts.framework/Headers/BFExecutor.h">
+			<value>11</value>
+			<value>11</value>
+			<value>0</value>
+			<value>0</value>
+		</item>
+		<item name="EmployeeDirectory/Bolts.framework/Headers/BFMeasurementEvent.h">
+			<value>12</value>
+			<value>9</value>
+			<value>0</value>
+			<value>0</value>
+		</item>
+		<item name="EmployeeDirectory/Bolts.framework/Headers/BFTask.h">
+			<value>13</value>
+			<value>37</value>
+			<value>0</value>
+			<value>0</value>
+		</item>
+		<item name="EmployeeDirectory/Bolts.framework/Headers/BFTaskCompletionSource.h">
+			<value>14</value>
+			<value>15</value>
+			<value>0</value>
+			<value>0</value>
+		</item>
+		<item name="EmployeeDirectory/Bolts.framework/Headers/BFURL.h">
+			<value>15</value>
+			<value>12</value>
+			<value>0</value>
+			<value>0</value>
+		</item>
+		<item name="EmployeeDirectory/Bolts.framework/Headers/BFWebViewAppLinkResolver.h">
+			<value>16</value>
+			<value>3</value>
+			<value>0</value>
+			<value>0</value>
+		</item>
+		<item name="EmployeeDirectory/Bolts.framework/Headers/Bolts.h">
+			<value>17</value>
+			<value>6</value>
+			<value>0</value>
+			<value>0</value>
+		</item>
+		<item name="EmployeeDirectory/Bolts.framework/Headers/BoltsVersion.h">
+			<value>18</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+		</item>
+		<item name="EmployeeDirectory/Parse.framework/Headers/Parse.h">
+			<value>19</value>
+			<value>20</value>
+			<value>0</value>
+			<value>0</value>
+		</item>
+		<item name="EmployeeDirectory/Parse.framework/Headers/ParseClientConfiguration.h">
+			<value>20</value>
+			<value>23</value>
+			<value>0</value>
+			<value>0</value>
+		</item>
+		<item name="EmployeeDirectory/Parse.framework/Headers/PFACL.h">
+			<value>21</value>
+			<value>27</value>
+			<value>0</value>
+			<value>0</value>
+		</item>
+		<item name="EmployeeDirectory/Parse.framework/Headers/PFAnalytics.h">
+			<value>22</value>
+			<value>17</value>
+			<value>0</value>
+			<value>0</value>
+		</item>
+		<item name="EmployeeDirectory/Parse.framework/Headers/PFAnonymousUtils+Deprecated.h">
+			<value>23</value>
+			<value>6</value>
+			<value>0</value>
+			<value>0</value>
+		</item>
+		<item name="EmployeeDirectory/Parse.framework/Headers/PFAnonymousUtils.h">
+			<value>24</value>
+			<value>7</value>
+			<value>0</value>
+			<value>0</value>
+		</item>
+		<item name="EmployeeDirectory/Parse.framework/Headers/PFCloud+Deprecated.h">
+			<value>25</value>
+			<value>8</value>
+			<value>0</value>
+			<value>0</value>
+		</item>
+		<item name="EmployeeDirectory/Parse.framework/Headers/PFCloud+Synchronous.h">
+			<value>26</value>
+			<value>6</value>
+			<value>0</value>
+			<value>0</value>
+		</item>
+		<item name="EmployeeDirectory/Parse.framework/Headers/PFCloud.h">
+			<value>27</value>
+			<value>9</value>
+			<value>0</value>
+			<value>0</value>
+		</item>
+		<item name="EmployeeDirectory/Parse.framework/Headers/PFConfig+Synchronous.h">
+			<value>28</value>
+			<value>6</value>
+			<value>0</value>
+			<value>0</value>
+		</item>
+		<item name="EmployeeDirectory/Parse.framework/Headers/PFConfig.h">
+			<value>29</value>
+			<value>11</value>
+			<value>0</value>
+			<value>0</value>
+		</item>
+		<item name="EmployeeDirectory/Parse.framework/Headers/PFConstants.h">
+			<value>30</value>
+			<value>93</value>
+			<value>3</value>
+			<value>3</value>
+		</item>
+		<item name="EmployeeDirectory/Parse.framework/Headers/PFFile+Deprecated.h">
+			<value>31</value>
+			<value>8</value>
+			<value>0</value>
+			<value>0</value>
+		</item>
+		<item name="EmployeeDirectory/Parse.framework/Headers/PFFile+Synchronous.h">
+			<value>32</value>
+			<value>11</value>
+			<value>0</value>
+			<value>0</value>
+		</item>
+		<item name="EmployeeDirectory/Parse.framework/Headers/PFFile.h">
+			<value>33</value>
+			<value>48</value>
+			<value>0</value>
+			<value>0</value>
+		</item>
+		<item name="EmployeeDirectory/Parse.framework/Headers/PFGeoPoint.h">
+			<value>34</value>
+			<value>15</value>
+			<value>0</value>
+			<value>0</value>
+		</item>
+		<item name="EmployeeDirectory/Parse.framework/Headers/PFInstallation.h">
+			<value>35</value>
+			<value>15</value>
+			<value>0</value>
+			<value>0</value>
+		</item>
+		<item name="EmployeeDirectory/Parse.framework/Headers/PFNetworkActivityIndicatorManager.h">
+			<value>36</value>
+			<value>13</value>
+			<value>0</value>
+			<value>0</value>
+		</item>
+		<item name="EmployeeDirectory/Parse.framework/Headers/PFObject+Deprecated.h">
+			<value>37</value>
+			<value>24</value>
+			<value>0</value>
+			<value>0</value>
+		</item>
+		<item name="EmployeeDirectory/Parse.framework/Headers/PFObject+Subclass.h">
+			<value>38</value>
+			<value>10</value>
+			<value>0</value>
+			<value>0</value>
+		</item>
+		<item name="EmployeeDirectory/Parse.framework/Headers/PFObject+Synchronous.h">
+			<value>39</value>
+			<value>44</value>
+			<value>0</value>
+			<value>0</value>
+		</item>
+		<item name="EmployeeDirectory/Parse.framework/Headers/PFObject.h">
+			<value>40</value>
+			<value>91</value>
+			<value>0</value>
+			<value>0</value>
+		</item>
+		<item name="EmployeeDirectory/Parse.framework/Headers/PFProduct.h">
+			<value>41</value>
+			<value>12</value>
+			<value>0</value>
+			<value>0</value>
+		</item>
+		<item name="EmployeeDirectory/Parse.framework/Headers/PFPurchase.h">
+			<value>42</value>
+			<value>19</value>
+			<value>0</value>
+			<value>0</value>
+		</item>
+		<item name="EmployeeDirectory/Parse.framework/Headers/PFPush+Deprecated.h">
+			<value>43</value>
+			<value>22</value>
+			<value>0</value>
+			<value>0</value>
+		</item>
+		<item name="EmployeeDirectory/Parse.framework/Headers/PFPush+Synchronous.h">
+			<value>44</value>
+			<value>12</value>
+			<value>0</value>
+			<value>0</value>
+		</item>
+		<item name="EmployeeDirectory/Parse.framework/Headers/PFPush.h">
+			<value>45</value>
+			<value>45</value>
+			<value>0</value>
+			<value>0</value>
+		</item>
+		<item name="EmployeeDirectory/Parse.framework/Headers/PFQuery+Deprecated.h">
+			<value>46</value>
+			<value>13</value>
+			<value>0</value>
+			<value>0</value>
+		</item>
+		<item name="EmployeeDirectory/Parse.framework/Headers/PFQuery+Synchronous.h">
+			<value>47</value>
+			<value>16</value>
+			<value>0</value>
+			<value>0</value>
+		</item>
+		<item name="EmployeeDirectory/Parse.framework/Headers/PFQuery.h">
+			<value>48</value>
+			<value>78</value>
+			<value>0</value>
+			<value>0</value>
+		</item>
+		<item name="EmployeeDirectory/Parse.framework/Headers/PFRelation.h">
+			<value>49</value>
+			<value>8</value>
+			<value>0</value>
+			<value>0</value>
+		</item>
+		<item name="EmployeeDirectory/Parse.framework/Headers/PFRole.h">
+			<value>50</value>
+			<value>12</value>
+			<value>0</value>
+			<value>0</value>
+		</item>
+		<item name="EmployeeDirectory/Parse.framework/Headers/PFSession.h">
+			<value>51</value>
+			<value>9</value>
+			<value>0</value>
+			<value>0</value>
+		</item>
+		<item name="EmployeeDirectory/Parse.framework/Headers/PFSubclassing.h">
+			<value>52</value>
+			<value>13</value>
+			<value>0</value>
+			<value>0</value>
+		</item>
+		<item name="EmployeeDirectory/Parse.framework/Headers/PFUser+Deprecated.h">
+			<value>53</value>
+			<value>16</value>
+			<value>0</value>
+			<value>0</value>
+		</item>
+		<item name="EmployeeDirectory/Parse.framework/Headers/PFUser+Synchronous.h">
+			<value>54</value>
+			<value>13</value>
+			<value>0</value>
+			<value>0</value>
+		</item>
+		<item name="EmployeeDirectory/Parse.framework/Headers/PFUser.h">
+			<value>55</value>
+			<value>36</value>
+			<value>0</value>
+			<value>0</value>
+		</item>
+		<item name="EmployeeDirectory/Parse.framework/Headers/PFUserAuthenticationDelegate.h">
+			<value>56</value>
+			<value>5</value>
+			<value>0</value>
+			<value>0</value>
+		</item>
+		<item name="EmployeeDirectory/AppDelegate.h">
+			<value>57</value>
+			<value>4</value>
+			<value>0</value>
+			<value>0</value>
+		</item>
+		<item name="EmployeeDirectory/AppDelegate.m">
+			<value>58</value>
+			<value>82</value>
+			<value>13</value>
+			<value>3</value>
+		</item>
+		<item name="EmployeeDirectory/DetailViewController.h">
+			<value>59</value>
+			<value>12</value>
+			<value>0</value>
+			<value>0</value>
+		</item>
+		<item name="EmployeeDirectory/DetailViewController.m">
+			<value>60</value>
+			<value>183</value>
+			<value>30</value>
+			<value>8</value>
+		</item>
+		<item name="EmployeeDirectory/Employee.h">
+			<value>61</value>
+			<value>12</value>
+			<value>0</value>
+			<value>0</value>
+		</item>
+		<item name="EmployeeDirectory/Employee.m">
+			<value>62</value>
+			<value>12</value>
+			<value>0</value>
+			<value>0</value>
+		</item>
+		<item name="EmployeeDirectory/main.m">
+			<value>63</value>
+			<value>6</value>
+			<value>1</value>
+			<value>1</value>
+		</item>
+		<item name="EmployeeDirectory/MasterViewController.h">
+			<value>64</value>
+			<value>7</value>
+			<value>0</value>
+			<value>0</value>
+		</item>
+		<item name="EmployeeDirectory/MasterViewController.m">
+			<value>65</value>
+			<value>281</value>
+			<value>44</value>
+			<value>11</value>
+		</item>
+		<item name="EmployeeDirectory/MyProtocol.h">
+			<value>66</value>
+			<value>4</value>
+			<value>0</value>
+			<value>0</value>
+		</item>
+		<item name="EmployeeDirectory/Network.h">
+			<value>67</value>
+			<value>9</value>
+			<value>0</value>
+			<value>0</value>
+		</item>
+		<item name="EmployeeDirectory/Network.m">
+			<value>68</value>
+			<value>72</value>
+			<value>10</value>
+			<value>2</value>
+		</item>
+		<item name="EmployeeDirectory/ReportsViewController.h">
+			<value>69</value>
+			<value>5</value>
+			<value>0</value>
+			<value>0</value>
+		</item>
+		<item name="EmployeeDirectory/ReportsViewController.m">
+			<value>70</value>
+			<value>70</value>
+			<value>12</value>
+			<value>6</value>
+		</item>
+		<item name="EmployeeDirectory/Utility.h">
+			<value>71</value>
+			<value>17</value>
+			<value>0</value>
+			<value>0</value>
+		</item>
+		<item name="EmployeeDirectory/Utility.m">
+			<value>72</value>
+			<value>70</value>
+			<value>13</value>
+			<value>8</value>
+		</item>
+		<average label="NCSS" value="26"/>
+		<average label="CCN" value="1"/>
+		<average label="Functions" value="0"/>
+		<sum label="NCSS" value="1886"/>
+		<sum label="CCN" value="128"/>
+		<sum label="Functions" value="44"/>
+	</measure>
+</cppncss>
+

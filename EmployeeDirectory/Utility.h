@@ -26,15 +26,6 @@
 
 + (id)sharedManager;
 
--(void)showLoadingScreen;
--(void)removeLoadingScreen;
--(void)setDeleg:(id)deleg;
-
--(BOOL)copyDatabaseIntoDocumentsDirectory:(NSString *)dbFilename;
--(BOOL)openDatabase;
--(BOOL)checkUser:(NSString*)userName password:(NSString*)password;
-
-
 // For Google Analytics
 -(void)setScreenName:(NSString*)screenName;
 -(void)setActionName:(NSString*)action label:(NSString*)lbl;

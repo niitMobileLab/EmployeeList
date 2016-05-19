@@ -17,11 +17,43 @@
 @implementation ReportsViewController
 
 
-
 - (void)viewDidLoad
 {
+   
+
+    
     [super viewDidLoad];
 
+    int a = 10;
+    do
+    {
+        NSLog(@"value of a: %d\n", a);
+        a = a + 1;
+    }while( a < 20 );
+    
+    char grade = 'B';
+    
+    switch(grade)
+    {
+        case 'A' :
+            NSLog(@"Excellent!\n" );
+            break;
+        case 'B' :
+        case 'C' :
+            NSLog(@"Well done\n" );
+            break;
+        case 'D' :
+            NSLog(@"You passed\n" );
+            break;
+        case 'F' :
+            NSLog(@"Better try again\n" );
+            break;
+        default :
+            NSLog(@"Invalid grade\n" );
+    }
+    NSLog(@"Your grade is  %c\n", grade );
+    
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -35,7 +67,10 @@
     [button setFrame:CGRectMake(0, 0, 30, 30)];
     UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithCustomView:button];
     self.navigationItem.rightBarButtonItem = barButton;
-
+    
+    
+    
+    /* do loop execution */
     
 }
 

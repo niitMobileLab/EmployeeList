@@ -26,10 +26,6 @@
     [super tearDown];
 }
 
--(void)testUserAuthentication
-{
-    [_networkUtils validateOnline:@"admin" password:@"niit@12345"];
-}
 
 -(void)testGetEmployeeData
 {

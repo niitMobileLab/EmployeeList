@@ -18,96 +18,65 @@
     dispatch_once(&onceToken, ^{
         sharedMyManager = [[self alloc] init];
     });
+    
+    int num1 = 3;
+    int num2 = 4;
+    int num3 = 1;
+    int num4 = 5;
+    
+    if(num1==3)
+    {
+        if(num2>num3)
+        {
+            if(num1>num3)
+            {
+                if(num3>num4)
+                {
+                    if(num4>num1)
+                    {
+                        num4 = num1;
+                    }else {
+                        num2 = num4;
+                    }
+                    
+                }else {
+                    num2= num3;
+                }
+            }else {
+                num1 = num2;
+            }
+        }
+        else
+        {
+            num2 = num3;
+        }
+        
+    }
+    
+    int num44 = 3;
+    int num5 = 4;
+    int num6 = 1;
+    
+    
+    if(num44==3)
+    {
+        if(num5>num6)
+        {
+            num44 = num5;
+        }
+        else
+        {
+            num5 = num6;
+        }
+    }
+    
+
+    
     return sharedMyManager;
 }
 
 
-// For Validation of UserName and password stored locally in DB
--(BOOL)validateOffline:(NSString*)userName password:(NSString*)password
-{
-    [[Utility sharedManager] copyDatabaseIntoDocumentsDirectory:@"UserDetails.db"];
-    [[Utility sharedManager] openDatabase];
-    return [[Utility sharedManager] checkUser:userName password:password];
 
-}
-
-// For Validation of UserName and password stored on Back4app cloud
--(BOOL)validateOnline:(NSString*)userName password:(NSString*)pwd
-{
-    __block BOOL loginSuccess = NO;;
-    // Network Data
-    //Validate the UserName and Password field
-    if(([userName length] > 0) && ([pwd length] > 0))
-    {
-        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"Username =%@", userName];
-        __block BOOL waitingForBlock = YES;
-
-        PFQuery *query = [PFQuery queryWithClassName:@"Users" predicate:predicate];
-        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-            
-            if (!error) {
-                // The find succeeded.
-                NSString *s = nil;
-                if([objects count] >=1)
-                {
-                    PFObject *pwdobj=[objects objectAtIndex:0];
-                    s =(NSString*)[pwdobj objectForKey:@"Password"];
-                }
-                if([s isEqualToString:pwd])
-                {
-                    waitingForBlock = NO;
-
-                    obj=[objects objectAtIndex:0];
-                    loginSuccess = YES;
-                    [idDeleg showNextScreen];
-                }
-                else{
-                    waitingForBlock = NO;
-
-                    loginSuccess = NO;
-                    [idDeleg showAlrt:@"Enter Valid Credential"];
-                }
-                
-            } else {
-                waitingForBlock = NO;
-                // Log details of the failure
-                loginSuccess = NO;
-                [idDeleg showAlrt:@"Enter Valid Credential"];
-                
-            }
-        }];
-        
-        while(waitingForBlock) {
-            [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode
-                                     beforeDate:[NSDate dateWithTimeIntervalSinceNow:0.1]];
-        }
-    }
-    else
-    {
-        loginSuccess = NO;
-        [idDeleg showAlrt:nil];
-    }
-    
-    return loginSuccess;
-}
-
-
-// Authenticate userName and password
--(BOOL)AuthenticateUser:(NSString*)userName password:(NSString*)pwd onLine:(BOOL)online
-{
-    BOOL authenticated;
-    // Local Data
-    if(online)
-    {
-        authenticated = [self validateOnline:userName password:pwd];
-    }
-    else
-    {
-        authenticated = [self validateOffline:userName password:pwd];
-    }
-    
-    return authenticated;
-}
 
 // Get Employees Data like their First Name, Last Name , Phone number etc from the local file or Back4app cloud
 -(NSDictionary*)getEmployeesData

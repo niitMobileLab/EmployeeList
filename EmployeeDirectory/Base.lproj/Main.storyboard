@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Ncw-7Q-BNI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="pML-ss-2Am">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -14,7 +14,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Search" id="OU1-ac-4tg">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <rect key="frame" x="0.0" y="64" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
                             <connections>
@@ -23,7 +23,7 @@
                         </searchBar>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="2pz-XF-uhl" detailTextLabel="VUb-g1-TGJ" style="IBUITableViewCellStyleSubtitle" id="m0d-ak-lc9">
-                                <rect key="frame" x="0.0" y="66" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="130" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="m0d-ak-lc9" id="a7N-65-3N3">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -73,7 +73,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="1523" y="146"/>
+            <point key="canvasLocation" x="2055" y="146"/>
         </scene>
         <!--Detail-->
         <scene sceneID="Cn3-H9-jdl">
@@ -163,7 +163,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lrm-kH-fPn" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1885" y="25"/>
+            <point key="canvasLocation" x="2417" y="25"/>
         </scene>
         <!--Reports View Controller-->
         <scene sceneID="BMd-3W-uap">
@@ -207,79 +207,25 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5tP-ST-De5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2228" y="25"/>
-        </scene>
-        <!--Login View Controller-->
-        <scene sceneID="YN9-H6-HKf">
-            <objects>
-                <viewController storyboardIdentifier="loginVC" id="7Fu-2z-GXQ" customClass="LoginViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Nm3-Mb-Ee9"/>
-                        <viewControllerLayoutGuide type="bottom" id="PA6-Zb-1Xr"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="mTd-7v-itt">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="UserName" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zr3-Wg-wrX">
-                                <rect key="frame" x="54" y="156" width="212" height="30"/>
-                                <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="15"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BMq-cx-ncM">
-                                <rect key="frame" x="54" y="235" width="212" height="30"/>
-                                <color key="backgroundColor" red="0.89031684069999995" green="0.72674601510000003" blue="0.33137521139999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="15"/>
-                                <state key="normal" title="Sign In">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="signInPressed:" destination="7Fu-2z-GXQ" eventType="touchUpInside" id="iJU-Ie-ucc"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uki-Xl-owI">
-                                <rect key="frame" x="54" y="197" width="212" height="30"/>
-                                <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="15"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                            </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo-3_0.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Vc1-0x-PEd">
-                                <rect key="frame" x="132" y="89" width="56" height="40"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.86635501179999996" green="0.89956315499999995" blue="0.61802579859999995" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="Tat-Pm-9dA"/>
-                    <nil key="simulatedTopBarMetrics"/>
-                    <connections>
-                        <outlet property="pwdField" destination="uki-Xl-owI" id="j4j-tK-0ql"/>
-                        <outlet property="userNameField" destination="zr3-Wg-wrX" id="Vpd-gU-zn6"/>
-                        <segue destination="pGg-6v-bdr" kind="push" identifier="Employees" id="XkQ-pN-W6K"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nf-Av-ia8" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1110" y="-170"/>
+            <point key="canvasLocation" x="2760" y="25"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="afU-eG-ljg">
+        <scene sceneID="ljJ-mc-YKH">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ncw-7Q-BNI" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pML-ss-2Am" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hgn-DL-VVZ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kVv-u9-NsP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="7Fu-2z-GXQ" kind="relationship" relationship="rootViewController" id="LiB-JG-Fh6"/>
+                        <segue destination="pGg-6v-bdr" kind="relationship" relationship="rootViewController" id="8pm-ht-3hv"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="igH-N7-5zi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8pz-pP-aID" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="438" y="-377"/>
+            <point key="canvasLocation" x="1523" y="146"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="logo-3_0.jpg" width="112" height="81"/>
-    </resources>
 </document>
